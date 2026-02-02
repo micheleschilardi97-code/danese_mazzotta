@@ -1,0 +1,59 @@
+:root {
+  /* Color Palette — Titanium & Ice */
+  --color-primary: #1a1a2e;         /* Deep Navy — brand authority */
+  --color-primary-light: #16213e;
+  --color-accent: #00d4aa;          /* Emerald Teal — trust & vitality */
+  --color-accent-hover: #00f0c0;
+  --color-accent-glow: rgba(0, 212, 170, 0.35);
+  --color-surface: #0f0f23;         /* Dark surface base */
+  --color-surface-card: #1a1a35;    /* Card elevation */
+  --color-surface-glass: rgba(255,255,255,0.04); /* Glassmorphism base */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a8a8c0;
+  --color-text-muted: #6b6b85;
+  --color-border: rgba(255,255,255,0.08);
+
+  /* Typography Scale — using clamp() per fluid responsive type */
+  --font-heading: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --text-xs: clamp(0.75rem, 1vw, 0.85rem);
+  --text-sm: clamp(0.85rem, 1.2vw, 1rem);
+  --text-base: clamp(1rem, 1.5vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 2vw, 1.5rem);
+  --text-xl: clamp(1.5rem, 3vw, 2rem);
+  --text-2xl: clamp(2rem, 4vw, 3rem);
+  --text-3xl: clamp(2.5rem, 5vw, 4rem);
+  --text-hero: clamp(3rem, 8vw, 5.5rem);
+
+  /* Spacing — 8px base grid */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-6: 3rem;
+  --space-8: 4rem;
+  --space-12: 6rem;
+  --space-16: 8rem;
+
+  /* Borders & Shadows */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.3);
+  --shadow-glow: 0 0 40px var(--color-accent-glow);
+
+  /* Transitions — standardizzate per consistenza */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast: 200ms;
+  --duration-base: 400ms;
+  --duration-slow: 800ms;
+
+  /* Breakpoints (usate via media queries) */
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+  --bp-2xl: 1536px;
+}
