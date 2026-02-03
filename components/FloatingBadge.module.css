@@ -1,0 +1,124 @@
+.badge {
+  position: fixed;
+  z-index: 900;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  background: linear-gradient(
+    135deg,
+    rgba(212, 135, 109, 0.95) 0%,
+    rgba(212, 135, 109, 0.98) 100%
+  );
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-full);
+  box-shadow: 
+    0 12px 40px rgba(212, 135, 109, 0.4),
+    0 4px 12px rgba(26, 58, 58, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  user-select: none;
+  overflow: visible;
+}
+
+/* Position variants */
+.top-right {
+  top: 140px;
+  right: 40px;
+}
+
+.top-left {
+  top: 140px;
+  left: 40px;
+}
+
+.bottom-right {
+  bottom: 40px;
+  right: 40px;
+}
+
+.bottom-left {
+  bottom: 40px;
+  left: 40px;
+}
+
+.icon {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.text {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.glow {
+  position: absolute;
+  inset: -8px;
+  background: radial-gradient(
+    circle,
+    rgba(212, 135, 109, 0.6) 0%,
+    transparent 70%
+  );
+  border-radius: var(--radius-full);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.pulse {
+  position: absolute;
+  inset: -4px;
+  border: 2px solid rgba(212, 135, 109, 0.8);
+  border-radius: var(--radius-full);
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .badge {
+    padding: var(--space-2) var(--space-4);
+  }
+
+  .top-right, .top-left {
+    top: 100px;
+  }
+
+  .top-right, .bottom-right {
+    right: 20px;
+  }
+
+  .top-left, .bottom-left {
+    left: 20px;
+  }
+
+  .text {
+    font-size: var(--text-xs);
+  }
+
+  .icon {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .badge {
+    position: static;
+    display: inline-flex;
+    margin: var(--space-4) auto;
+  }
+
+  .bottom-right,
+  .bottom-left {
+    display: none;
+  }
+}

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
@@ -8,6 +8,15 @@ const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
+  weight: ["300", "400", "500", "600", "700", "800"],
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-playfair",
+  weight: ["400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -41,20 +50,11 @@ export const metadata: Metadata = {
     url: 'https://studgiugno.it/',
     title: 'Dentista Lecce | Impianti Senza Dolore | Studio Dott. Mario Giugno',
     description: 'Impianti dentali con sedazione cosciente a Lecce. Prima visita gratuita. 15+ anni esperienza, 2000+ pazienti felici. ☎️ 0832 199 3151',
-    images: [
-      {
-        url: '/images/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Studio Dentistico Dott. Mario Giugno - Implantologia Lecce'
-      }
-    ]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Dentista Lecce | Impianti Senza Dolore | Studio Dott. Mario Giugno',
     description: 'Impianti dentali con sedazione cosciente. Prima visita gratuita. ☎️ 0832 199 3151',
-    images: ['/images/og-image.jpg'],
   },
   icons: {
     icon: '/icons/favicon.ico',
@@ -173,7 +173,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="it" className={inter.variable}>
+    <html lang="it" className={`${inter.variable} ${playfair.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -188,4 +188,3 @@ export default function RootLayout({
     </html>
   );
 }
-

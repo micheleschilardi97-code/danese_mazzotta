@@ -1,0 +1,68 @@
+.badge {
+  position: fixed;
+  top: 120px;
+  right: 2rem;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(212, 135, 109, 0.95) 0%,
+    rgba(139, 158, 141, 0.9) 100%
+  );
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  box-shadow: 0 12px 48px rgba(212, 135, 109, 0.4),
+              0 6px 24px rgba(26, 58, 58, 0.2),
+              inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  user-select: none;
+}
+
+.icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.3));
+}
+
+.text {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 8px rgba(26, 58, 58, 0.3);
+  white-space: nowrap;
+}
+
+.pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .badge {
+    top: 100px;
+    right: 1rem;
+    padding: 0.75rem 1.25rem;
+    gap: 0.5rem;
+  }
+  
+  .icon {
+    font-size: 1.25rem;
+  }
+  
+  .text {
+    font-size: 0.875rem;
+  }
+}

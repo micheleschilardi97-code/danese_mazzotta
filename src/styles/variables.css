@@ -1,54 +1,74 @@
 :root {
-  /* Color Palette — Titanium & Ice */
-  --color-primary: #1a1a2e;         /* Deep Navy — brand authority */
-  --color-primary-light: #16213e;
-  --color-accent: #00d4aa;          /* Emerald Teal — trust & vitality */
-  --color-accent-hover: #00f0c0;
-  --color-accent-glow: rgba(0, 212, 170, 0.35);
-  --color-surface: #0f0f23;         /* Dark surface base */
-  --color-surface-card: #1a1a35;    /* Card elevation */
-  --color-surface-glass: rgba(255,255,255,0.04); /* Glassmorphism base */
-  --color-text-primary: #ffffff;
-  --color-text-secondary: #a8a8c0;
-  --color-text-muted: #6b6b85;
-  --color-border: rgba(255,255,255,0.08);
+  /* Color Palette — Luxury Medical Premium */
+  --color-primary: #0a0e27;         /* Midnight Navy — prestige & authority */
+  --color-primary-light: #141938;
+  --color-accent: #00d4aa;          /* Medical Teal — trust & precision */
+  --color-accent-secondary: #d4af37; /* Champagne Gold — luxury accent */
+  --color-accent-hover: #00ffcc;
+  --color-accent-glow: rgba(0, 212, 170, 0.4);
+  --color-gold-glow: rgba(212, 175, 55, 0.25);
+  --color-surface: #0a0a1a;         /* Deep surface */
+  --color-surface-card: #12152e;    /* Elevated cards */
+  --color-surface-glass: rgba(255,255,255,0.06); /* Premium glass */
+  --color-text-primary: #f8f9fa;
+  --color-text-secondary: #b8b9c5;
+  --color-text-muted: #7a7b8f;
+  --color-border: rgba(255,255,255,0.1);
+  --color-border-gold: rgba(212, 175, 55, 0.2);
 
-  /* Typography Scale — using clamp() per fluid responsive type */
-  --font-heading: 'Inter', sans-serif;
-  --font-body: 'Inter', sans-serif;
-  --text-xs: clamp(0.75rem, 1vw, 0.85rem);
-  --text-sm: clamp(0.85rem, 1.2vw, 1rem);
+  /* Typography Scale — Premium serif + modern sans */
+  --font-heading: 'Playfair Display', 'Georgia', serif;
+  --font-body: 'Inter', -apple-system, system-ui, sans-serif;
+  --font-accent: 'Inter', sans-serif;
+  --text-xs: clamp(0.75rem, 1vw, 0.875rem);
+  --text-sm: clamp(0.875rem, 1.2vw, 1rem);
   --text-base: clamp(1rem, 1.5vw, 1.125rem);
   --text-lg: clamp(1.125rem, 2vw, 1.5rem);
-  --text-xl: clamp(1.5rem, 3vw, 2rem);
-  --text-2xl: clamp(2rem, 4vw, 3rem);
-  --text-3xl: clamp(2.5rem, 5vw, 4rem);
-  --text-hero: clamp(3rem, 8vw, 5.5rem);
+  --text-xl: clamp(1.5rem, 3vw, 2.25rem);
+  --text-2xl: clamp(2rem, 4vw, 3.5rem);
+  --text-3xl: clamp(2.75rem, 5.5vw, 4.5rem);
+  --text-hero: clamp(3.5rem, 8vw, 6.5rem);
 
-  /* Spacing — 8px base grid */
+  /* Spacing — 8px base grid + premium breathing room */
   --space-1: 0.5rem;
   --space-2: 1rem;
+  --space-2-5: 1.25rem;
   --space-3: 1.5rem;
   --space-4: 2rem;
+  --space-5: 2.5rem;
   --space-6: 3rem;
   --space-8: 4rem;
+  --space-10: 5rem;
   --space-12: 6rem;
   --space-16: 8rem;
+  --space-20: 10rem;
 
-  /* Borders & Shadows */
-  --radius-sm: 8px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
+  /* Borders & Shadows — Luxury depth */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
   --radius-full: 9999px;
-  --shadow-card: 0 4px 24px rgba(0,0,0,0.3);
-  --shadow-glow: 0 0 40px var(--color-accent-glow);
+  --shadow-card: 0 8px 32px rgba(0,0,0,0.4), 0 2px 8px rgba(0,0,0,0.2);
+  --shadow-card-hover: 0 16px 48px rgba(0,0,0,0.5), 0 4px 16px rgba(0, 212, 170, 0.15);
+  --shadow-glow: 0 0 48px var(--color-accent-glow);
+  --shadow-gold-glow: 0 0 36px var(--color-gold-glow);
+  --shadow-premium: 0 20px 60px rgba(0, 0, 0, 0.6), 0 4px 12px rgba(212, 175, 55, 0.1);
 
-  /* Transitions — standardizzate per consistenza */
+  /* Transitions — Premium easing curves */
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-  --duration-fast: 200ms;
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-elastic: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --duration-instant: 100ms;
+  --duration-fast: 250ms;
   --duration-base: 400ms;
-  --duration-slow: 800ms;
+  --duration-slow: 600ms;
+  --duration-slower: 900ms;
+
+  /* Navbar sizing */
+  --navbar-height-desktop: 72px;
+  --navbar-height-mobile: 64px;
+  --navbar-bg: rgba(15, 15, 35, 0.95);
 
   /* Breakpoints (usate via media queries) */
   --bp-sm: 640px;

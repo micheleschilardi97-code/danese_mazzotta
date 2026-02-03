@@ -2,33 +2,38 @@ import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://studgiugno.it';
+  const currentDate = new Date();
   
   const staticPages = [
-    '',
-    '/contatti',
+    { path: '', priority: 1.0, changeFreq: 'weekly' as const },
+    { path: '/contatti', priority: 0.9, changeFreq: 'monthly' as const },
+    { path: '/chi-siamo', priority: 0.8, changeFreq: 'monthly' as const },
+    { path: '/servizi', priority: 0.9, changeFreq: 'weekly' as const },
+    { path: '/testimonianze', priority: 0.7, changeFreq: 'weekly' as const },
+    { path: '/faq', priority: 0.6, changeFreq: 'monthly' as const },
   ];
 
   const servizi = [
-    'implantologia',
-    'chirurgia-orale',
-    'estetica-dentale',
-    'bonifica-dentale',
-    'protesi',
-    'laser-dentale',
+    { slug: 'implantologia', priority: 0.9 },
+    { slug: 'chirurgia-orale', priority: 0.85 },
+    { slug: 'estetica-dentale', priority: 0.8 },
+    { slug: 'bonifica-dentale', priority: 0.8 },
+    { slug: 'protesi', priority: 0.75 },
+    { slug: 'laser-dentale', priority: 0.75 },
   ];
 
   return [
-    ...staticPages.map((path) => ({
-      url: `${baseUrl}${path}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: path === '' ? 1.0 : 0.8,
+    ...staticPages.map((page) => ({
+      url: `${baseUrl}${page.path}`,
+      lastModified: currentDate,
+      changeFrequency: page.changeFreq,
+      priority: page.priority,
     })),
-    ...servizi.map((slug) => ({
-      url: `${baseUrl}/servizi/${slug}`,
-      lastModified: new Date(),
+    ...servizi.map((servizio) => ({
+      url: `${baseUrl}/servizi/${servizio.slug}`,
+      lastModified: currentDate,
       changeFrequency: 'weekly' as const,
-      priority: 0.7,
+      priority: servizio.priority,
     })),
   ];
 }
