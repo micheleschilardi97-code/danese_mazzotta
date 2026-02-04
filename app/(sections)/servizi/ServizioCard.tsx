@@ -57,6 +57,14 @@ export default function ServizioCard({ servizio, delay = 0 }: ServizioCardProps)
       className={`${styles.card} animate-in-scale ${isVisible ? 'visible' : ''}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
+      {/* Background Image */}
+      {servizio.backgroundImage && (
+        <div 
+          className={styles.cardBackground}
+          style={{ backgroundImage: `url(${servizio.backgroundImage})` }}
+        />
+      )}
+
       <div className={styles.cardIcon}>
         {iconMap[servizio.icon] || iconMap.tooth}
       </div>

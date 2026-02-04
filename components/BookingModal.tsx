@@ -56,8 +56,6 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
       // Simula invio form (sostituisci con la tua API)
       await new Promise(resolve => setTimeout(resolve, 2000));
       
-      console.log('Form Data:', data);
-      
       setSubmitSuccess(true);
       reset();
       

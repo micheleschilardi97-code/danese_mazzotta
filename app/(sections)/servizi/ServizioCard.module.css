@@ -7,6 +7,45 @@
   transition: all var(--duration-base) var(--ease-out);
   cursor: pointer;
   overflow: hidden;
+  isolation: isolate;
+}
+
+/* Background Image */
+.cardBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  opacity: 0.6;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all var(--duration-base) var(--ease-out);
+}
+
+.card:hover .cardBackground {
+  opacity: 0.75;
+  transform: scale(1.05);
+}
+
+/* Overlay gradient per leggibilità */
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 10, 31, 0.60) 0%,
+    rgba(10, 10, 31, 0.55) 50%,
+    rgba(26, 26, 46, 0.50) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
 }
 
 .card::before {
@@ -20,6 +59,7 @@
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--duration-base) var(--ease-out);
+  z-index: 2;
 }
 
 .card:hover {
@@ -33,6 +73,8 @@
 }
 
 .cardIcon {
+  position: relative;
+  z-index: 3;
   width: 64px;
   height: 64px;
   display: flex;
@@ -56,6 +98,8 @@
 }
 
 .cardTitle {
+  position: relative;
+  z-index: 3;
   font-size: var(--text-xl);
   font-weight: 700;
   color: var(--color-text-primary);
@@ -63,6 +107,8 @@
 }
 
 .cardDescription {
+  position: relative;
+  z-index: 3;
   font-size: var(--text-base);
   color: var(--color-text-secondary);
   line-height: 1.6;
@@ -70,6 +116,8 @@
 }
 
 .cardFeatures {
+  position: relative;
+  z-index: 3;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -92,6 +140,8 @@
 }
 
 .cardLink {
+  position: relative;
+  z-index: 3;
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);

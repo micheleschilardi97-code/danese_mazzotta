@@ -2,6 +2,7 @@
 
 import { Testimonianza } from './testimonianze.data';
 import styles from './TestimonanzaCard.module.css';
+import Image from 'next/image';
 
 interface TestimonanzaCardProps {
   testimonianza: Testimonianza;
@@ -29,15 +30,7 @@ export default function TestimonanzaCard({ testimonianza }: TestimonanzaCardProp
     <div className={styles.card}>
       <div className={styles.cardHeader}>
         <div className={styles.avatar}>
-          {testimonianza.avatar ? (
-            <img
-              src={testimonianza.avatar}
-              alt={testimonianza.name}
-              className={styles.avatarImage}
-            />
-          ) : (
-            getInitials(testimonianza.name)
-          )}
+          {getInitials(testimonianza.name)}
         </div>
         <div className={styles.cardInfo}>
           <div className={styles.cardName}>{testimonianza.name}</div>

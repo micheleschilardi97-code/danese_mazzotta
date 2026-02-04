@@ -70,7 +70,6 @@ export default function ContactForm({ servizi }: ContactFormProps) {
     // Simulate API call
     try {
       await new Promise((resolve) => setTimeout(resolve, 1500));
-      console.log('Form data:', formData);
       setSubmitStatus('success');
       setFormData({
         nome: '',

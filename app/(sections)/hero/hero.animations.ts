@@ -101,25 +101,6 @@ export const subtitleVariants: Variants = {
     }
   }
 };
-    y: 35,
-    scale: 0.96,
-    filter: "blur(10px)"
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    filter: "blur(0px)",
-    transition: {
-      delay: 0.35,
-      duration: 0.9,
-      ease: [0.25, 0.1, 0.25, 1],
-      opacity: { duration: 0.75, ease: "easeOut" },
-      scale: { ...springConfigs.smooth, duration: 0.85 },
-      filter: { duration: 1 }
-    }
-  }
-};
 
 // Trust badges with 3D flip effect - Enhanced depth, mobile-optimized
 export const badgeVariants: Variants = {

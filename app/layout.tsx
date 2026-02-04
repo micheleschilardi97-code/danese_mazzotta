@@ -72,7 +72,7 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "DentalClinic",
   "name": "Studio Dentistico di Chirurgia Orale ed Implantologia Avanzata del Dott. Mario Giugno",
-  "image": "https://studgiugno.it/images/studio.jpg",
+  "image": "https://studgiugno.it/images/studio-dentistico-bg.jpg.png",
   "description": "Studio dentistico specializzato in implantologia avanzata e chirurgia orale in Lecce",
   "@id": "https://studgiugno.it/",
   "url": "https://studgiugno.it",
