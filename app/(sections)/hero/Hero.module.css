@@ -50,23 +50,7 @@
   transition: opacity 0.5s ease;
 }
 
-.heroBackground::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(10, 14, 39, 0.96) 0%,
-    rgba(10, 14, 39, 0.92) 30%,
-    rgba(26, 26, 46, 0.88) 60%,
-    rgba(0, 212, 170, 0.12) 85%,
-    rgba(212, 175, 55, 0.08) 100%
-  );
-  z-index: 1;
-}
+
 
 /* Animated Gradient Mesh with Gold Accents */
 .gradientMesh {
@@ -224,10 +208,57 @@
   position: relative;
   z-index: 10;
   text-align: center;
-  max-width: 900px;
+  max-width: 1000px;
   padding: calc(80px + var(--space-6)) var(--space-4) var(--space-6);
   will-change: transform, opacity;
   transition: pointer-events 0.3s ease;
+}
+
+/* Doctor Image - Background Layer */
+.doctorImageBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 7;
+  opacity: 0.25;
+}
+
+.doctorImg {
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.hero:hover .doctorImg {
+  transform: scale(1.05);
+}
+
+/* Mobile: sposta l'immagine molto a sinistra per mostrare il dottore */
+@media (max-width: 767px) {
+  .doctorImg {
+    object-position: 80% center;
+  }
+}
+
+/* Overlay migliorato per leggibilità */
+.heroBackground::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 14, 39, 0.88) 0%,
+    rgba(10, 14, 39, 0.85) 30%,
+    rgba(26, 26, 46, 0.82) 60%,
+    rgba(0, 212, 170, 0.15) 85%,
+    rgba(212, 175, 55, 0.1) 100%
+  );
+  z-index: 6;
 }
 
 /* Mobile: padding ottimizzato e typography premium */
@@ -236,6 +267,21 @@
     padding-top: calc(64px + 5rem);
     padding-left: var(--space-4);
     padding-right: var(--space-4);
+  }
+
+  .doctorImageBackground {
+    opacity: 0.5;
+  }
+
+  .heroBackground::after {
+    background: linear-gradient(
+      135deg,
+      rgba(10, 14, 39, 0.75) 0%,
+      rgba(10, 14, 39, 0.72) 30%,
+      rgba(26, 26, 46, 0.70) 60%,
+      rgba(0, 212, 170, 0.12) 85%,
+      rgba(212, 175, 55, 0.08) 100%
+    );
   }
 
   .heroTitle {
@@ -488,7 +534,7 @@
   margin-bottom: var(--space-6);
   color: var(--color-text-primary);
   letter-spacing: -0.03em;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .heroTitleLine {
@@ -548,7 +594,7 @@
 
 .heroSubtitle {
   font-size: clamp(0.95rem, 1.8vw, 1.125rem);
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.95);
   margin-bottom: var(--space-8);
   line-height: 1.8;
   max-width: 700px;
@@ -556,6 +602,7 @@
   margin-right: auto;
   font-weight: 400;
   letter-spacing: 0.01em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7), 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Trust Badges - Premium Bento Grid con mobile optimization */

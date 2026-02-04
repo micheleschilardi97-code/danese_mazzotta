@@ -133,35 +133,26 @@ export default function Hero() {
     >
       {/* Animated Mesh Gradient Background */}
       <motion.div className={styles.heroBackground}>
-        {/* Video Background */}
-        {!isMobile && heroData.backgroundVideo && (
-          <video
-            ref={videoRef}
-            autoPlay
-            loop
-            muted
-            playsInline
-            onLoadedData={() => setVideoLoaded(true)}
-            className={styles.heroVideo}
-            style={{ opacity: videoLoaded ? 0.4 : 0 }}
-          >
-            <source src={heroData.backgroundVideo} type="video/mp4" />
-          </video>
-        )}
-        
-        {isMobile && heroData.backgroundVideoMobile && (
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            onLoadedData={() => setVideoLoaded(true)}
-            className={styles.heroVideo}
-            style={{ opacity: videoLoaded ? 0.4 : 0 }}
-          >
-            <source src={heroData.backgroundVideoMobile} type="video/mp4" />
-          </video>
-        )}
+        {/* Doctor Image Background */}
+        <div className={styles.doctorImageBackground}>
+          {isMobile ? (
+            <Image
+              src="/images/dentista-mobile.png"
+              alt="Dr. Mario Giugno - Studio dentistico a Lecce"
+              fill
+              priority
+              className={styles.doctorImg}
+            />
+          ) : (
+            <Image
+              src="/images/studio-dentistico-bg.jpg.png"
+              alt="Studio dentistico a Lecce"
+              fill
+              priority
+              className={styles.doctorImg}
+            />
+          )}
+        </div>
         
         {/* Animated Gradient Mesh */}
         <div className={styles.gradientMesh} />
