@@ -23,6 +23,13 @@
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-card);
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .aboutImage {
+    display: block;
+  }
 }
 
 .aboutImage img {
