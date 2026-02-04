@@ -141,7 +141,11 @@ export default function Hero() {
               alt="Dr. Mario Giugno - Studio dentistico a Lecce"
               fill
               priority
+              quality={85}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
               className={styles.doctorImg}
+              sizes="100vw"
             />
           ) : (
             <Image
@@ -149,7 +153,11 @@ export default function Hero() {
               alt="Studio dentistico a Lecce"
               fill
               priority
+              quality={90}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
               className={styles.doctorImg}
+              sizes="100vw"
             />
           )}
         </div>

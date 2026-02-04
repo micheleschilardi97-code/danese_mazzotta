@@ -8,6 +8,7 @@
   background: #0a0a0f;
   isolation: isolate;
   will-change: opacity;
+  contain: layout style paint;
 }
 
 .heroBackground {
@@ -223,6 +224,7 @@
   bottom: 0;
   z-index: 7;
   opacity: 0.25;
+  will-change: opacity;
 }
 
 .doctorImg {
@@ -239,6 +241,17 @@
 @media (max-width: 767px) {
   .doctorImg {
     object-position: 80% center;
+  }
+}
+
+/* Tablet: ottimizzazione intermedia */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .doctorImageBackground {
+    opacity: 0.3;
+  }
+  
+  .heroContent {
+    padding-top: calc(72px + 4rem);
   }
 }
 
@@ -544,16 +557,11 @@
 
 .heroTitleHighlight {
   display: inline-block;
-  background: linear-gradient(135deg, #00d4aa 0%, #00ffcc 40%, #d4af37 70%, #00d4aa 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
   position: relative;
   font-size: clamp(2rem, 5vw, 3.25rem);
   font-weight: 900;
-  background-size: 200% 200%;
-  animation: gradientShift 4s ease-in-out infinite;
-  filter: drop-shadow(0 0 24px rgba(0, 212, 170, 0.4)) drop-shadow(0 0 8px rgba(212, 175, 55, 0.2));
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.8)) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6));
   will-change: transform;
   font-style: italic;
 }
