@@ -10,6 +10,7 @@ export const navLinks: NavLink[] = [
   { label: 'Testimonianze', href: '/testimonianze' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Contatti', href: '/contatti' },
+  { label: 'Prenota Visita', href: '/prenota-visita' },
 ];
 
 export const studioInfo = {

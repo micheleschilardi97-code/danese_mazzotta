@@ -1,0 +1,570 @@
+/* Container principale */
+.container {
+  min-height: 100vh;
+  padding: 120px 24px 80px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Progress Steps */
+.progressSteps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 48px;
+  padding: 0 24px;
+}
+
+.progressStep {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.stepNumber {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e2e8f0;
+  color: #94a3b8;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.progressStep.active .stepNumber {
+  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+}
+
+.stepLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #94a3b8;
+  transition: color 0.3s ease;
+}
+
+.progressStep.active .stepLabel {
+  color: #0d9488;
+}
+
+.progressLine {
+  width: 60px;
+  height: 2px;
+  background: #e2e8f0;
+  transition: background 0.3s ease;
+}
+
+/* Content Area */
+.content {
+  background: white;
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  min-height: 500px;
+}
+
+/* Calendar Section */
+.calendarSection {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.calendarHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.monthName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  text-transform: capitalize;
+}
+
+.monthButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: none;
+  background: #f1f5f9;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.monthButton:hover {
+  background: #e2e8f0;
+  color: #0d9488;
+  transform: scale(1.05);
+}
+
+.weekDays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.weekDay {
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #64748b;
+  padding: 8px;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.dayButton {
+  aspect-ratio: 1;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background: #f8fafc;
+  color: #1e293b;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9375rem;
+}
+
+.dayButton.active:hover {
+  background: #e0f2fe;
+  border-color: #0ea5e9;
+  transform: scale(1.05);
+}
+
+.dayButton.selected {
+  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+  color: white;
+  border-color: #0d9488;
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+}
+
+.dayButton.inactive {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.dayButton:disabled {
+  cursor: not-allowed;
+}
+
+/* Time Slots Section */
+.timeSlotsSection {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.selectedDateInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.backButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: none;
+  background: #f1f5f9;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.backButton:hover {
+  background: #e2e8f0;
+  color: #0d9488;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  text-transform: capitalize;
+}
+
+.timeSlotsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 12px;
+}
+
+.timeSlot {
+  padding: 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  background: white;
+  color: #1e293b;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.timeSlot:hover:not(.unavailable) {
+  background: #e0f2fe;
+  border-color: #0ea5e9;
+  transform: translateY(-2px);
+}
+
+.timeSlot.selected {
+  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+  color: white;
+  border-color: #0d9488;
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+}
+
+.timeSlot.unavailable {
+  opacity: 0.4;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+.noSlots {
+  text-align: center;
+  color: #64748b;
+  font-size: 1.125rem;
+  padding: 48px 24px;
+}
+
+/* Form Section */
+.formSection {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.selectedInfo {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  border-radius: 16px;
+  margin-bottom: 32px;
+}
+
+.infoLabel {
+  font-size: 0.875rem;
+  color: #047857;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.infoValue {
+  font-size: 1.125rem;
+  color: #065f46;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formGroup label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 14px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #1e293b;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #0d9488;
+  box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.1);
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submitButton {
+  padding: 18px 32px;
+  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 16px;
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(13, 148, 136, 0.4);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  animation: rotate 1s linear infinite;
+}
+
+.spinner circle {
+  stroke: white;
+  stroke-linecap: round;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+
+/* Success Modal */
+.successOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 1000;
+}
+
+.successModal {
+  background: white;
+  border-radius: 24px;
+  padding: 48px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.successIcon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.successTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 16px;
+}
+
+.successMessage {
+  font-size: 1.125rem;
+  color: #64748b;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.successDate {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0d9488;
+  text-transform: capitalize;
+  padding: 16px;
+  background: #ecfdf5;
+  border-radius: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 100px 16px 60px;
+  }
+
+  .content {
+    padding: 24px;
+  }
+
+  .header {
+    margin-bottom: 32px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .progressSteps {
+    padding: 0 8px;
+    gap: 8px;
+  }
+
+  .stepLabel {
+    display: none;
+  }
+
+  .progressLine {
+    width: 40px;
+  }
+
+  .calendarGrid {
+    gap: 4px;
+  }
+
+  .dayButton {
+    font-size: 0.875rem;
+  }
+
+  .timeSlotsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 8px;
+  }
+
+  .timeSlot {
+    padding: 12px 8px;
+    font-size: 0.875rem;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .successModal {
+    padding: 32px 24px;
+  }
+
+  .successTitle {
+    font-size: 1.5rem;
+  }
+
+  .successMessage {
+    font-size: 1rem;
+  }
+
+  .successDate {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .stepNumber {
+    width: 32px;
+    height: 32px;
+    font-size: 0.875rem;
+  }
+
+  .progressLine {
+    width: 30px;
+  }
+}

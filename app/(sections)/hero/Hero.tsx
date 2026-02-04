@@ -286,7 +286,7 @@ export default function Hero() {
           transition={{ delay: 0.7, duration: 0.5 }}
         >
           <Link
-            href={heroData.ctaPrimary.href}
+            href="/prenota-visita"
             className={styles.bookingCta}
             aria-label="Prenota subito la tua prima visita odontoiatrica gratuita del valore di 150 euro"
             title="Prenota Visita Gratuita - Valore 150€"
