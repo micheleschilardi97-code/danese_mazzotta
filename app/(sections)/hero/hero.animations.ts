@@ -32,47 +32,38 @@ export const springConfigs = {
   }
 };
 
-// Container variants for stagger children - Enhanced orchestration
+// Container variants - Ottimizzato per velocità
 export const containerVariants: Variants = {
   hidden: { 
-    opacity: 0,
-    y: 20
+    opacity: 0
   },
   visible: {
     opacity: 1,
-    y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.4,
       ease: [0.43, 0.13, 0.23, 0.96],
-      staggerChildren: 0.08,
-      delayChildren: 0.15,
+      staggerChildren: 0.05,
+      delayChildren: 0.1,
       when: "beforeChildren"
     }
   }
 };
 
-// Title text reveal animation - Cinematic entrance with premium Playfair Display
+// Title text reveal animation - Ottimizzato per performance
 export const titleVariants: Variants = {
   hidden: { 
     opacity: 0,
-    y: 50,
-    scale: 0.92,
-    filter: "blur(10px)",
-    textShadow: "0 0 0 rgba(0, 0, 0, 0)"
+    y: 30,
+    scale: 0.95
   },
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
-    filter: "blur(0px)",
-    textShadow: "0 2px 12px rgba(0, 0, 0, 0.5), 0 0 24px rgba(0, 212, 170, 0.15)",
     transition: {
-      duration: 0.85,
+      duration: 0.6,
       ease: [0.22, 1, 0.36, 1],
-      opacity: { duration: 0.65 },
-      scale: { ...springConfigs.elastic, duration: 1.1, damping: 20 },
-      filter: { duration: 0.75 },
-      textShadow: { duration: 0.8, delay: 0.3 }
+      opacity: { duration: 0.5 }
     }
   }
 };
@@ -94,10 +85,22 @@ export const charVariants: Variants = {
   }
 };
 
-// Subtitle fade in - Premium reveal effect with refined motion
+// Subtitle fade in - Ottimizzato
 export const subtitleVariants: Variants = {
   hidden: { 
     opacity: 0,
+    y: 20
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: [0.22, 1, 0.36, 1],
+      delay: 0.2
+    }
+  }
+};
     y: 35,
     scale: 0.96,
     filter: "blur(10px)"

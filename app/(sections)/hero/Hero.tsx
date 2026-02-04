@@ -75,9 +75,10 @@ export default function Hero() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-
-
+  // Semplifica mouse tracking - solo desktop, no mobile
   useEffect(() => {
+    if (isMobile) return;
+    
     const handleMouseMove = (e: MouseEvent) => {
       if (heroRef.current) {
         const rect = heroRef.current.getBoundingClientRect();
@@ -88,9 +89,9 @@ export default function Hero() {
       }
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
     return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, [mouseX, mouseY]);
+  }, [mouseX, mouseY, isMobile]);
 
   useEffect(() => {
     if (inView) {
@@ -168,24 +169,22 @@ export default function Hero() {
         {/* Noise Texture Overlay */}
         <div className={styles.noiseOverlay} />
 
-        {/* Parallax Particles with Mouse Tracking */}
-        <div className={styles.heroParticles}>
-          {[...Array(8)].map((_, i) => (
-            <motion.div
-              key={i}
-              className={styles.particle}
-              custom={i}
-              variants={particleVariants}
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-              style={{
-                x: particleTransforms[i].x,
-                y: particleTransforms[i].y
-              }}
-              aria-hidden="true"
-            />
-          ))}
-        </div>
+        {/* Parallax Particles with Mouse Tracking - Ridotto per performance */}
+        {!isMobile && (
+          <div className={styles.heroParticles}>
+            {[...Array(4)].map((_, i) => (
+              <motion.div
+                key={i}
+                className={styles.particle}
+                custom={i}
+                variants={particleVariants}
+                initial="hidden"
+                animate={inView ? "visible" : "hidden"}
+                aria-hidden="true"
+              />
+            ))}
+          </div>
+        )}
       </motion.div>
 
       {/* Hero Content */}
@@ -202,24 +201,10 @@ export default function Hero() {
           variants={titleVariants}
         >
           <motion.span className={styles.heroTitleLine}>
-            {heroData.title.split('').map((char, i) => (
-              <motion.span
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: i * 0.03, duration: 0.3 }}
-                style={{ display: 'inline-block' }}
-              >
-                {char === ' ' ? '\u00A0' : char}
-              </motion.span>
-            ))}
+            {heroData.title}
           </motion.span>
           <motion.span 
             className={`${styles.heroTitleLine} ${styles.heroTitleHighlight}`}
-            style={{
-              x: parallaxX,
-              y: parallaxY
-            }}
           >
             {heroData.titleHighlight}
           </motion.span>

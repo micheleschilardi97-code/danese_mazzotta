@@ -10,12 +10,6 @@ import Link from 'next/link';
 export default function Navbar() {
   const isScrolled = useScrollThreshold(50);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    // Trigger entrance animation
-    setTimeout(() => setIsLoaded(true), 100);
-  }, []);
 
   const handleLinkClick = () => {
     setIsMobileMenuOpen(false);
@@ -23,7 +17,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''} ${isLoaded ? styles.loaded : ''}`}>
+      <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
         <div className="container">
           <div className={styles.navbarContent}>
             {/* Logo with Badge */}
