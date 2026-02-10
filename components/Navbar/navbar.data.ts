@@ -1,3 +1,5 @@
+import { config } from '@/config';
+
 export interface NavLink {
   label: string;
   href: string;
@@ -14,8 +16,8 @@ export const navLinks: NavLink[] = [
 ];
 
 export const studioInfo = {
-  nome: "Studio Dentistico di Chirurgia Orale ed Implantologia Avanzata",
-  dottore: "Dott. Mario Giugno",
-  telefono: "0832 199 3151",
-  telefono_tel: "+390832-199-3151",
+  nome: config.studio.nome,
+  dottore: config.studio.dottore,
+  telefono: config.contatti.telefono,
+  telefono_tel: config.contatti.telefonoLink,
 };

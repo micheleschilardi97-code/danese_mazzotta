@@ -1,8 +1,10 @@
+import { config } from '@/config';
+
 export const footerData = {
   studio: {
-    name: "Studio Dentistico di Chirurgia Orale ed Implantologia Avanzata",
-    dottore: "Dott. Mario Giugno",
-    description: "Specializzazione in chirurgia orale e implantologia avanzata nel cuore di Lecce."
+    name: config.studio.nome,
+    dottore: config.studio.dottore,
+    description: `Specializzazione in ${config.studio.specializzazione.toLowerCase()} nel cuore di Lecce.`
   },
   links: {
     servizi: [
@@ -19,19 +21,21 @@ export const footerData = {
     ]
   },
   contatti: {
-    indirizzo: 'Viale G. Leopardi, 90, 73100 Lecce LE',
-    telefono: '0832 199 3151',
-    telefono_tel: '+390832-199-3151',
-    email: 'info@studiodentisticogiugno.it'
+    indirizzo: config.contatti.indirizzo,
+    telefono: config.contatti.telefono,
+    telefono_tel: config.contatti.telefonoLink,
+    email: config.contatti.email
   },
-  social: [
-    { name: 'Facebook', url: 'https://facebook.com', icon: 'facebook' },
-    { name: 'Instagram', url: 'https://instagram.com', icon: 'instagram' },
-    { name: 'LinkedIn', url: 'https://linkedin.com', icon: 'linkedin' }
-  ],
+  social: Object.entries(config.social)
+    .filter(([_, url]) => url)
+    .map(([name, url]) => ({
+      name: name.charAt(0).toUpperCase() + name.slice(1),
+      url: url as string,
+      icon: name
+    })),
   copyright: {
     year: new Date().getFullYear(),
-    text: 'Studio Dentistico Dott. Mario Giugno. Tutti i diritti riservati.'
+    text: `${config.studio.nome}. Tutti i diritti riservati.`
   },
   legal: [
     { label: 'Privacy Policy', href: '/privacy' },

@@ -1,20 +1,24 @@
+import { getHeroData } from '@/config';
+
 /**
  * Hero Section Data Configuration
  * Dental Practice - Lecce, Italy
  * Target: 5%+ conversion rate | Mobile-first
  */
 
+const configHero = getHeroData();
+
 export const heroData = {
   // ═══════════════════════════════════════════════════════════════
   // HEADLINE
   // ═══════════════════════════════════════════════════════════════
-  title: "Il Tuo Sorriso Perfetto",
-  titleHighlight: "Impianti Dentali Senza Dolore",
+  title: configHero.title,
+  titleHighlight: configHero.titleHighlight,
   
   // ═══════════════════════════════════════════════════════════════
   // SUBHEADLINE + VALUE PROPS
   // ═══════════════════════════════════════════════════════════════
-  subtitle: "Tecnologia 3D avanzata · Sedazione cosciente · Garanzia 10 anni",
+  subtitle: configHero.subtitle,
   
   // ═══════════════════════════════════════════════════════════════
   // VIDEO BACKGROUND (Authentic footage, NOT stock)
@@ -26,11 +30,7 @@ export const heroData = {
   // ═══════════════════════════════════════════════════════════════
   // TRUST BADGES (Above headline - CRITICAL positioning)
   // ═══════════════════════════════════════════════════════════════
-  trustBadges: [
-    { icon: "shield", text: "15 Anni Esperienza", color: "accent" },
-    { icon: "star", text: "5★ Google (200+ Recensioni)", color: "gold" },
-    { icon: "users", text: "2000+ Pazienti Felici", color: "accent" }
-  ],
+  trustBadges: configHero.trustBadges,
   
   // ═══════════════════════════════════════════════════════════════
   // GOOGLE RATING (Inline with subheadline)
@@ -45,11 +45,7 @@ export const heroData = {
   // ═══════════════════════════════════════════════════════════════
   // PROFESSIONAL CERTIFICATIONS
   // ═══════════════════════════════════════════════════════════════
-  certifications: [
-    { name: "Società Italiana Implantologia", abbr: "SIO" },
-    { name: "Ordine Medici Chirurghi", abbr: "OMC Lecce" },
-    { name: "European Association of Dental Implantologists", abbr: "EADI" }
-  ],
+  certifications: configHero.certifications,
   
   // ═══════════════════════════════════════════════════════════════
   // URGENCY COUNTDOWN TIMER (+22% conversion)
@@ -80,21 +76,16 @@ export const heroData = {
   // ═══════════════════════════════════════════════════════════════
   // PRIMARY CTA (Most important - €150 value)
   // ═══════════════════════════════════════════════════════════════
-  ctaPrimary: {
-    text: "Prima Visita Gratuita",
-    href: "/contatti#prenota",
-    badge: "€150 di valore - GRATIS",
-    ariaLabel: "Prenota una visita gratuita con il Dott. Mario Giugno"
-  },
+  ctaPrimary: configHero.ctaPrimary,
   
   // ═══════════════════════════════════════════════════════════════
   // CLICK-TO-CALL CTA (+64% mobile calls)
   // ═══════════════════════════════════════════════════════════════
-  phoneNumber: "0832 199 3151",
-  phoneHref: "tel:+390832199315",
+  phoneNumber: configHero.ctaSecondary.text,
+  phoneHref: configHero.ctaSecondary.href,
   phoneText: "CHIAMA ORA",
   phoneSubtext: "Lun-Ven 8:00-20:00 · Risposta immediata",
-  phoneAriaLabel: "Chiama ora il 0832 199 3151",
+  phoneAriaLabel: `Chiama ora al ${configHero.ctaSecondary.text}`,
   
   // ═══════════════════════════════════════════════════════════════
   // SEO & SCHEMA.ORG DATA

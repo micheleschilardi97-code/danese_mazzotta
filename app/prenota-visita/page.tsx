@@ -76,7 +76,10 @@ export default function PrenotaVisitaPage() {
     const firstDay = new Date(year, month, 1);
     const lastDay = new Date(year, month + 1, 0);
     const startDate = new Date(firstDay);
-    startDate.setDate(startDate.getDate() - firstDay.getDay());
+    // Inizia da lunedì (standard italiano) invece che da domenica
+    const dayOfWeek = firstDay.getDay();
+    const diff = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
+    startDate.setDate(startDate.getDate() - diff);
     
     const days: (Date | null)[] = [];
     const today = new Date();
@@ -228,7 +231,7 @@ export default function PrenotaVisitaPage() {
                 </div>
 
                 <div className={styles.weekDays}>
-                  {['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'].map(day => (
+                  {['Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab', 'Dom'].map(day => (
                     <div key={day} className={styles.weekDay}>{day}</div>
                   ))}
                 </div>

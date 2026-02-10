@@ -1,3 +1,26 @@
+import { config } from '@/config';
+
+// Helper per formattare orari
+const formatOrario = (mattina: string | null, pomeriggio: string | null): string => {
+  if (!mattina && !pomeriggio) return 'Chiuso';
+  if (mattina && pomeriggio) return `${mattina}, ${pomeriggio}`;
+  return mattina || pomeriggio || 'Chiuso';
+};
+
+// Genera schedule da config.orari
+const generateSchedule = () => {
+  const giorni = ['lunedi', 'martedi', 'mercoledi', 'giovedi', 'venerdi', 'sabato', 'domenica'] as const;
+  const giorniItaliano = ['Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato', 'Domenica'];
+  
+  return giorni.map((giorno, index) => {
+    const orario = config.orari[giorno];
+    return {
+      day: giorniItaliano[index],
+      hours: orario.aperto ? formatOrario(orario.mattina, orario.pomeriggio) : 'Chiuso'
+    };
+  });
+};
+
 export const contattiData = {
   subtitle: 'Contatti',
   title: 'Prenota la Tua Visita',
@@ -5,26 +28,18 @@ export const contattiData = {
   info: {
     indirizzo: {
       label: 'Indirizzo',
-      value: 'Viale G. Leopardi, 90',
-      city: '73100 Lecce LE',
-      full: 'Viale G. Leopardi, 90, 73100 Lecce LE'
+      value: config.contatti.indirizzo.split(',')[0],
+      city: config.contatti.indirizzo.split(',').slice(1).join(',').trim(),
+      full: config.contatti.indirizzo
     },
     telefono: {
       label: 'Telefono',
-      value: '0832 199 3151',
-      tel: '+390832-199-3151'
+      value: config.contatti.telefono,
+      tel: config.contatti.telefonoLink
     },
     orari: {
       label: 'Orari',
-      schedule: [
-        { day: 'Lunedì', hours: '17:30 - 20:30' },
-        { day: 'Martedì', hours: 'Chiuso' },
-        { day: 'Mercoledì', hours: '17:30 - 20:30' },
-        { day: 'Giovedì', hours: 'Chiuso' },
-        { day: 'Venerdì', hours: '09:00 - 13:00' },
-        { day: 'Sabato', hours: 'Su appuntamento' },
-        { day: 'Domenica', hours: 'Chiuso' }
-      ]
+      schedule: generateSchedule()
     }
   },
   form: {
@@ -48,8 +63,8 @@ export const contattiData = {
     privacyText: 'Accetto la privacy policy e il trattamento dei dati personali'
   },
   map: {
-    latitude: 40.3515,
-    longitude: 18.1750,
-    embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3029.123!2d18.175!3d40.3515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDIxJzA1LjQiTiAxOMKwMTAnMzAuMCJF!5e0!3m2!1sit!2sit!4v1234567890'
+    latitude: config.contatti.coordinate.lat,
+    longitude: config.contatti.coordinate.lng,
+    embedUrl: `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3029.123!2d${config.contatti.coordinate.lng}!3d${config.contatti.coordinate.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDIxJzA1LjQiTiAxOMKwMTAnMzAuMCJF!5e0!3m2!1sit!2sit!4v1234567890`
   }
 };

@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import { config } from '@/config';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,14 +22,14 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Studio Dentistico Dott. Mario Giugno — Lecce',
-    default: 'Dentista Lecce | Impianti Senza Dolore | Prima Visita Gratuita — Studio Dott. Mario Giugno'
+    template: `%s | ${config.studio.nome} — Lecce`,
+    default: `Dentista Lecce | ${config.studio.specializzazione} | Prima Visita Gratuita — ${config.studio.nomeBreve}`
   },
-  description: 'Impianti dentali con sedazione cosciente a Lecce. 15+ anni esperienza, 2000+ pazienti soddisfatti. Prima visita gratuita. ☎️ 0832 199 3151 — Viale Leopardi 90',
-  keywords: ['dentista lecce', 'implantologia lecce', 'impianti dentali senza dolore', 'chirurgia orale lecce', 'studio dentistico lecce', 'dott mario giugno', 'sedazione cosciente', 'prima visita gratuita dentista'],
-  authors: [{ name: 'Dott. Mario Giugno' }],
-  creator: 'Studio Dentistico Dott. Mario Giugno',
-  publisher: 'Studio Dentistico Dott. Mario Giugno',
+  description: `${config.studio.specializzazione} a Lecce. ${config.stats.anniEsperienza}+ anni esperienza, ${config.stats.pazientiSoddisfatti}+ pazienti soddisfatti. Prima visita gratuita. ☎️ ${config.contatti.telefono} — ${config.contatti.indirizzo}`,
+  keywords: ['dentista lecce', 'implantologia lecce', 'studio dentistico lecce', config.studio.dottore.toLowerCase(), 'prima visita gratuita dentista'],
+  authors: [{ name: config.studio.dottore }],
+  creator: config.studio.nome,
+  publisher: config.studio.nome,
   robots: {
     index: true,
     follow: true,
@@ -41,20 +42,20 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://studgiugno.it/'
+    canonical: config.seo.siteUrl
   },
   openGraph: {
     type: 'website',
     locale: 'it_IT',
-    siteName: 'Studio Dentistico Dott. Mario Giugno',
-    url: 'https://studgiugno.it/',
-    title: 'Dentista Lecce | Impianti Senza Dolore | Studio Dott. Mario Giugno',
-    description: 'Impianti dentali con sedazione cosciente a Lecce. Prima visita gratuita. 15+ anni esperienza, 2000+ pazienti felici. ☎️ 0832 199 3151',
+    siteName: config.seo.siteName,
+    url: config.seo.siteUrl,
+    title: `Dentista Lecce | ${config.studio.specializzazione} | ${config.studio.nomeBreve}`,
+    description: `${config.studio.specializzazione} a Lecce. Prima visita gratuita. ${config.stats.anniEsperienza}+ anni esperienza. ☎️ ${config.contatti.telefono}`,
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dentista Lecce | Impianti Senza Dolore | Studio Dott. Mario Giugno',
-    description: 'Impianti dentali con sedazione cosciente. Prima visita gratuita. ☎️ 0832 199 3151',
+    title: `Dentista Lecce | ${config.studio.specializzazione} | ${config.studio.nomeBreve}`,
+    description: `${config.studio.specializzazione} a Lecce. Prima visita gratuita. ☎️ ${config.contatti.telefono}`,
   },
   icons: {
     icon: '/icons/favicon.ico',
@@ -71,16 +72,16 @@ export const metadata: Metadata = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "DentalClinic",
-  "name": "Studio Dentistico di Chirurgia Orale ed Implantologia Avanzata del Dott. Mario Giugno",
-  "image": "https://studgiugno.it/images/studio-dentistico-bg.jpg.png",
-  "description": "Studio dentistico specializzato in implantologia avanzata e chirurgia orale in Lecce",
-  "@id": "https://studgiugno.it/",
-  "url": "https://studgiugno.it",
-  "telephone": "+390832199315",
+  "name": config.studio.nome,
+  "image": `${config.seo.siteUrl}${config.images.heroBg}`,
+  "description": config.seo.description,
+  "@id": config.seo.siteUrl,
+  "url": config.seo.siteUrl,
+  "telephone": config.contatti.telefonoLink,
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Viale G. Leopardi, 90",
+    "streetAddress": config.contatti.indirizzo.split(',')[0],
     "addressLocality": "Lecce",
     "addressRegion": "Puglia",
     "postalCode": "73100",
@@ -88,13 +89,13 @@ const structuredData = {
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 40.3515,
-    "longitude": 18.1750
+    "latitude": config.contatti.coordinate.lat,
+    "longitude": config.contatti.coordinate.lng
   },
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5",
-    "reviewCount": "2000",
+    "reviewCount": String(config.stats.pazientiSoddisfatti),
     "bestRating": "5",
     "worstRating": "1"
   },

@@ -152,6 +152,13 @@
   padding: 8px;
 }
 
+@media (max-width: 768px) {
+  .weekDay {
+    font-size: 0.75rem;
+    padding: 4px;
+  }
+}
+
 .calendarGrid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -511,11 +518,12 @@
   }
 
   .calendarGrid {
-    gap: 4px;
+    gap: 6px;
   }
 
   .dayButton {
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
+    min-height: 44px;
   }
 
   .timeSlotsGrid {
@@ -555,7 +563,7 @@
   }
 
   .content {
-    padding: 20px;
+    padding: 16px;
   }
 
   .stepNumber {
@@ -566,5 +574,28 @@
 
   .progressLine {
     width: 30px;
+  }
+
+  .calendarGrid {
+    gap: 4px;
+  }
+
+  .dayButton {
+    font-size: 0.8125rem;
+    min-height: 40px;
+  }
+
+  .weekDay {
+    font-size: 0.6875rem;
+    padding: 2px;
+  }
+
+  .monthName {
+    font-size: 1.25rem;
+  }
+
+  .monthButton {
+    width: 36px;
+    height: 36px;
   }
 }

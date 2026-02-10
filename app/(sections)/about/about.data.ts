@@ -1,16 +1,18 @@
+import { config } from '@/config';
+
 export const aboutData = {
   subtitle: 'Chi Siamo',
   title: 'Esperienza e Innovazione al Servizio del Tuo Sorriso',
-  description: 'Il Dott. Mario Giugno è un professionista specializzato in chirurgia orale e implantologia avanzata, con anni di esperienza nel settore dentale. Il nostro studio utilizza le tecnologie più moderne per garantire trattamenti sicuri, efficaci e minimamente invasivi.',
-  image: '/images/doctor.jpg',
+  description: `${config.studio.dottore} è un professionista specializzato in ${config.studio.specializzazione.toLowerCase()}, con anni di esperienza nel settore dentale. Il nostro studio utilizza le tecnologie più moderne per garantire trattamenti sicuri, efficaci e minimamente invasivi.`,
+  image: config.images.doctor,
   stats: [
     {
-      value: 15,
+      value: config.stats.anniEsperienza,
       suffix: '+',
       label: 'Anni di Esperienza'
     },
     {
-      value: 2000,
+      value: config.stats.pazientiSoddisfatti,
       suffix: '+',
       label: 'Pazienti Soddisfatti'
     },
@@ -20,9 +22,9 @@ export const aboutData = {
       label: 'Tasso di Successo'
     },
     {
-      value: 500,
+      value: config.stats.interventiFatti,
       suffix: '+',
-      label: 'Impianti Realizzati'
+      label: 'Interventi Realizzati'
     }
   ],
   features: [
