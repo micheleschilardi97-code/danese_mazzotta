@@ -1,9 +1,9 @@
 import { config } from '@/config';
 
-// Helper per formattare orari
+// Helper per formattare orari su una riga
 const formatOrario = (mattina: string | null, pomeriggio: string | null): string => {
   if (!mattina && !pomeriggio) return 'Chiuso';
-  if (mattina && pomeriggio) return `${mattina}, ${pomeriggio}`;
+  if (mattina && pomeriggio) return `${mattina}  ${pomeriggio}`;
   return mattina || pomeriggio || 'Chiuso';
 };
 
