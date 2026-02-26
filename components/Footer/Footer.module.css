@@ -37,7 +37,7 @@
 
 .brandDottore {
   font-size: var(--text-xl);
-  font-weight: 800;
+  font-weight: 700;
   color: var(--color-accent);
   margin-bottom: var(--space-2);
 }

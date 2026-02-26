@@ -81,7 +81,7 @@
 .cardQuote {
   color: var(--color-accent);
   opacity: 0.3;
-  font-size: 48px;
+  font-size: 36px;
   line-height: 0;
   height: 24px;
 }

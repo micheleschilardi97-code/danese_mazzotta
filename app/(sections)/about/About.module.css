@@ -54,7 +54,7 @@
 
 .title {
   font-size: var(--text-2xl);
-  font-weight: 800;
+  font-weight: 700;
   color: var(--color-text-primary);
 }
 
@@ -93,7 +93,7 @@
 
 .statValue {
   font-size: var(--text-2xl);
-  font-weight: 800;
+  font-weight: 700;
   color: var(--color-accent);
   display: block;
   line-height: 1;

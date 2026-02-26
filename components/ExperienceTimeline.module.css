@@ -28,11 +28,11 @@
 
 .number {
   font-family: var(--font-display);
-  font-size: clamp(6rem, 15vw, 12rem);
-  font-weight: 900;
+  font-size: clamp(4rem, 10vw, 7rem);
+  font-weight: 800;
   color: var(--color-accent);
   line-height: 0.9;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.04em;
   background: linear-gradient(
     135deg,
     var(--color-accent) 0%,
@@ -46,7 +46,7 @@
 
 .label {
   font-family: var(--font-display);
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(1.25rem, 2.5vw, 1.875rem);
   font-weight: 600;
   color: var(--color-primary);
   letter-spacing: -0.02em;
@@ -86,7 +86,7 @@
 
 .milestoneYear {
   font-family: var(--font-mono);
-  font-size: 2rem;
+  font-size: 1.625rem;
   font-weight: 700;
   color: var(--color-accent);
   letter-spacing: -0.02em;
