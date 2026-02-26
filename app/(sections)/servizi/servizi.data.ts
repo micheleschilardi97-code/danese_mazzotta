@@ -16,7 +16,7 @@ export const serviziData: Servizio[] = [
     title: 'Laser Terapia',
     description: 'Trattamenti con tecnologia laser di ultima generazione per interventi minimamente invasivi, più rapidi e con tempi di guarigione ridotti.',
     features: ['Trattamenti minimamente invasivi', 'Guarigione rapida', 'Massimo comfort'],
-    backgroundImage: '/images/servizi/laser-terapia.jpg'
+    backgroundImage: '/images/servizi/laser_terapia.png'
   },
   {
     id: '2',
@@ -25,7 +25,7 @@ export const serviziData: Servizio[] = [
     title: 'Parodontologia',
     description: 'Diagnosi e trattamento delle malattie parodontali con approccio rigenerativo. Specializzazione in rigenerazione ossea.',
     features: ['Rigenerazione ossea', 'Terapia parodontale', 'Mantenimento gengivale'],
-    backgroundImage: '/images/servizi/parodontologia.jpg'
+    backgroundImage: '/images/servizi/Parodontologia.png'
   },
   {
     id: '3',
@@ -34,7 +34,7 @@ export const serviziData: Servizio[] = [
     title: 'Igiene Dentale',
     description: 'Pulizia professionale e programmi di prevenzione personalizzati per mantenere una bocca sana e un sorriso splendente.',
     features: ['Pulizia professionale', 'Programmi di prevenzione', 'Educazione all\'igiene orale'],
-    backgroundImage: '/images/servizi/igiene-dentale.jpg'
+    backgroundImage: '/images/servizi/igiene_dentale.png'
   },
   {
     id: '4',
@@ -43,7 +43,7 @@ export const serviziData: Servizio[] = [
     title: 'Impianti Dentali',
     description: 'Chirurgia orale e implantare avanzata per sostituire i denti mancanti con soluzioni permanenti e naturali.',
     features: ['Impianti in titanio', 'Chirurgia implantare', 'Innesti ossei'],
-    backgroundImage: '/images/servizi/impianti-dentali.jpg'
+    backgroundImage: '/images/servizi/impianti_dentali.png'
   },
   {
     id: '5',
@@ -61,7 +61,7 @@ export const serviziData: Servizio[] = [
     title: 'Endodonzia',
     description: 'Trattamenti endodontici di precisione con sistemi di ingrandimento per salvare i denti naturali compromessi.',
     features: ['Devitalizzazioni', 'Ritrattamenti', 'Microscopia operatoria'],
-    backgroundImage: '/images/servizi/endodonzia.jpg'
+    backgroundImage: '/images/servizi/endodonzia.png'
   },
   {
     id: '7',
@@ -70,7 +70,7 @@ export const serviziData: Servizio[] = [
     title: 'Sbiancamento Dentale',
     description: 'Sbiancamento professionale per donare luminosità e brillantezza al tuo sorriso in modo sicuro e duraturo.',
     features: ['Sbiancamento professionale', 'Risultati duraturi', 'Trattamento sicuro'],
-    backgroundImage: '/images/servizi/sbiancamento.jpg'
+    backgroundImage: '/images/servizi/sbiancamento_dentale.png'
   }
 ];
 
