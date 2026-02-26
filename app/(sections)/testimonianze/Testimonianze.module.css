@@ -118,15 +118,21 @@
   background: var(--color-border);
   cursor: pointer;
   transition: all var(--duration-fast) var(--ease-out);
+  /* Expand touch target to 44px minimum */
+  padding: 18px;
+  background-clip: content-box;
+  box-sizing: content-box;
 }
 
 .dot.active {
   background: var(--color-accent);
   width: 24px;
   border-radius: var(--radius-full);
+  background-clip: content-box;
 }
 
 .dot:hover {
   background: var(--color-accent);
   opacity: 0.7;
+  background-clip: content-box;
 }

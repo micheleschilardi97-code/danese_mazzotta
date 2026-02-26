@@ -18,19 +18,26 @@ export default function Testimonianze() {
   const maxIndex = Math.max(0, totalSlides - slidesPerView);
 
   useEffect(() => {
+    let resizeTimer: ReturnType<typeof setTimeout>;
     const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setSlidesPerView(3);
-      } else if (window.innerWidth >= 768) {
-        setSlidesPerView(2);
-      } else {
-        setSlidesPerView(1);
-      }
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        if (window.innerWidth >= 1024) {
+          setSlidesPerView(3);
+        } else if (window.innerWidth >= 768) {
+          setSlidesPerView(2);
+        } else {
+          setSlidesPerView(1);
+        }
+      }, 150);
     };
 
     handleResize();
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    return () => {
+      clearTimeout(resizeTimer);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   const goToPrevious = () => {

@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
+import Image from 'next/image';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 import { Servizio } from './servizi.data';
 import styles from './ServizioCard.module.css';
@@ -59,10 +60,17 @@ export default function ServizioCard({ servizio, delay = 0 }: ServizioCardProps)
     >
       {/* Background Image */}
       {servizio.backgroundImage && (
-        <div 
-          className={styles.cardBackground}
-          style={{ backgroundImage: `url(${servizio.backgroundImage})` }}
-        />
+        <div className={styles.cardBackground}>
+          <Image
+            src={servizio.backgroundImage}
+            alt=""
+            fill
+            sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+            quality={60}
+            loading="lazy"
+            style={{ objectFit: 'cover' }}
+          />
+        </div>
       )}
 
       <div className={styles.cardIcon}>

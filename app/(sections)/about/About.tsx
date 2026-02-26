@@ -2,6 +2,7 @@
 
 import { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 import { animateValue } from '@/utils/animation.utils';
 import { aboutData } from './about.data';
@@ -36,16 +37,16 @@ export default function About() {
         <div className={styles.aboutContent}>
           {/* Image */}
           <div className={`${styles.aboutImage} animate-in-left ${isVisible ? 'visible' : ''}`}>
-            <picture>
-              {aboutData.imageMobile && (
-                <source media="(max-width: 767px)" srcSet={aboutData.imageMobile} />
-              )}
-              <img
-                src={aboutData.image}
-                alt="Studio Dentistico Di Tanna Cairo"
-                loading="lazy"
-              />
-            </picture>
+            <Image
+              src={aboutData.image}
+              alt="Studio Dentistico Di Tanna Cairo"
+              width={600}
+              height={500}
+              sizes="(max-width: 767px) 100vw, 50vw"
+              loading="lazy"
+              quality={80}
+              style={{ width: '100%', height: 'auto', borderRadius: 'inherit' }}
+            />
           </div>
 
           {/* Text Content */}

@@ -67,12 +67,19 @@ export default function Hero() {
   // Counter animation for patient count
   const [patientCount, setPatientCount] = useState(0);
 
-  // Detect mobile
+  // Detect mobile — debounced to avoid excessive re-renders
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    let resizeTimer: ReturnType<typeof setTimeout>;
+    const checkMobile = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => setIsMobile(window.innerWidth < 768), 150);
+    };
+    setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', checkMobile, { passive: true });
+    return () => {
+      clearTimeout(resizeTimer);
+      window.removeEventListener('resize', checkMobile);
+    };
   }, []);
 
   // Semplifica mouse tracking - solo desktop, no mobile

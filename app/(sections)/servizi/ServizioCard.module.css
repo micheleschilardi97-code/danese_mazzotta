@@ -57,15 +57,12 @@
   bottom: 0;
   z-index: 0;
   opacity: 0.6;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: all var(--duration-base) var(--ease-out);
+  overflow: hidden;
+  transition: opacity var(--duration-base) var(--ease-out);
 }
 
 .card:hover .cardBackground {
   opacity: 0.75;
-  transform: scale(1.05);
 }
 
 /* Overlay gradient per leggibilità */

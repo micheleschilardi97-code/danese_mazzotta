@@ -53,7 +53,7 @@
 
 
 
-/* Animated Gradient Mesh with Gold Accents */
+/* Animated Gradient Mesh with Gold Accents — GPU-composited via opacity */
 .gradientMesh {
   position: absolute;
   top: 0;
@@ -61,29 +61,39 @@
   right: 0;
   bottom: 0;
   z-index: 2;
-  background: radial-gradient(circle at 20% 50%, rgba(0, 212, 170, 0.15) 0%, rgba(212, 175, 55, 0.05) 30%, transparent 60%);
-  animation: morphGradientPremium 12s ease-in-out infinite;
-  opacity: 0.85;
   mix-blend-mode: screen;
-  will-change: background;
+  pointer-events: none;
 }
 
-@keyframes morphGradientPremium {
-  0%, 100% {
-    background: radial-gradient(circle at 20% 50%, rgba(0, 212, 170, 0.15) 0%, rgba(212, 175, 55, 0.05) 30%, transparent 60%);
-  }
-  20% {
-    background: radial-gradient(circle at 80% 30%, rgba(212, 175, 55, 0.12) 0%, rgba(0, 212, 170, 0.08) 35%, transparent 65%);
-  }
-  40% {
-    background: radial-gradient(circle at 50% 80%, rgba(0, 212, 170, 0.18) 0%, rgba(212, 175, 55, 0.06) 30%, transparent 60%);
-  }
-  60% {
-    background: radial-gradient(circle at 30% 70%, rgba(212, 175, 55, 0.1) 0%, rgba(0, 212, 170, 0.12) 35%, transparent 65%);
-  }
-  80% {
-    background: radial-gradient(circle at 70% 60%, rgba(0, 212, 170, 0.15) 0%, rgba(212, 175, 55, 0.08) 30%, transparent 60%);
-  }
+.gradientMesh::before,
+.gradientMesh::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  will-change: opacity;
+}
+
+.gradientMesh::before {
+  background: radial-gradient(circle at 20% 50%, rgba(0, 212, 170, 0.15) 0%, rgba(212, 175, 55, 0.05) 30%, transparent 60%);
+  animation: meshFadeA 12s ease-in-out infinite;
+}
+
+.gradientMesh::after {
+  background: radial-gradient(circle at 70% 60%, rgba(0, 212, 170, 0.15) 0%, rgba(212, 175, 55, 0.08) 30%, transparent 60%);
+  animation: meshFadeB 12s ease-in-out infinite;
+}
+
+@keyframes meshFadeA {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 0.2; }
+}
+
+@keyframes meshFadeB {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.85; }
 }
 
 /* Noise Texture Overlay */
@@ -115,7 +125,7 @@
   border-radius: 50%;
   opacity: 0.5;
   box-shadow: 0 0 12px rgba(0, 212, 170, 0.6), 0 0 24px rgba(0, 212, 170, 0.35);
-  will-change: transform, opacity, filter;
+  will-change: transform, opacity;
 }
 
 .particle:nth-child(4n) {
@@ -234,7 +244,7 @@
 }
 
 .hero:hover .doctorImg {
-  transform: scale(1.05);
+  /* Disabled: scaling a full-viewport image is expensive */
 }
 
 /* Mobile: sposta l'immagine molto a sinistra per mostrare il dottore */

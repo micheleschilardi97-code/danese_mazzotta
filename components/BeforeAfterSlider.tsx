@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import styles from './BeforeAfterSlider.module.css';
 
 interface BeforeAfterProps {
@@ -60,7 +61,7 @@ export default function BeforeAfterSlider({
       >
         {/* Before Image */}
         <div className={styles.imageWrapper}>
-          <img src={beforeImage} alt="Prima" className={styles.image} />
+          <Image src={beforeImage} alt="Prima" className={styles.image} fill sizes="(max-width: 767px) 100vw, 600px" quality={80} />
           <div className={styles.label} data-position="before">
             Prima
           </div>
@@ -71,7 +72,7 @@ export default function BeforeAfterSlider({
           className={styles.imageWrapper}
           style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
         >
-          <img src={afterImage} alt="Dopo" className={styles.image} />
+          <Image src={afterImage} alt="Dopo" className={styles.image} fill sizes="(max-width: 767px) 100vw, 600px" quality={80} />
           <div className={styles.label} data-position="after">
             Dopo
           </div>

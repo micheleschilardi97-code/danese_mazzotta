@@ -17,15 +17,22 @@ export function useScrollPosition(): ScrollPosition {
     // Check if window is defined (client-side)
     if (typeof window === 'undefined') return;
 
+    let ticking = false;
     const handleScroll = () => {
-      setScrollPosition({
-        x: window.scrollX,
-        y: window.scrollY,
-      });
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(() => {
+          setScrollPosition({
+            x: window.scrollX,
+            y: window.scrollY,
+          });
+          ticking = false;
+        });
+      }
     };
 
     // Set initial position
-    handleScroll();
+    setScrollPosition({ x: window.scrollX, y: window.scrollY });
 
     // Add scroll event listener
     window.addEventListener('scroll', handleScroll, { passive: true });

@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useReducedMotion } from '@/hooks/useReducedMotion';
 import styles from './FloatingBadge.module.css';
 
 interface FloatingBadgeProps {
@@ -16,6 +17,8 @@ export default function FloatingBadge({
   position = 'top-right',
   delay = 0
 }: FloatingBadgeProps) {
+  const prefersReducedMotion = useReducedMotion();
+
   return (
     <motion.div
       className={`${styles.badge} ${styles[position]}`}
@@ -26,7 +29,7 @@ export default function FloatingBadge({
         delay,
         ease: [0.16, 1, 0.3, 1]
       }}
-      whileHover={{
+      whileHover={prefersReducedMotion ? {} : {
         scale: 1.05,
         rotate: 2,
         transition: { duration: 0.3 }
@@ -34,11 +37,11 @@ export default function FloatingBadge({
     >
       <motion.div
         className={styles.icon}
-        animate={{
+        animate={prefersReducedMotion ? {} : {
           rotate: [0, 10, -10, 0],
           scale: [1, 1.1, 1]
         }}
-        transition={{
+        transition={prefersReducedMotion ? {} : {
           duration: 3,
           repeat: Infinity,
           ease: 'easeInOut'
@@ -49,33 +52,37 @@ export default function FloatingBadge({
       
       <span className={styles.text}>{text}</span>
       
-      {/* Animated glow */}
-      <motion.div
-        className={styles.glow}
-        animate={{
-          scale: [1, 1.3, 1],
-          opacity: [0.3, 0.6, 0.3]
-        }}
-        transition={{
-          duration: 2,
-          repeat: Infinity,
-          ease: 'easeInOut'
-        }}
-      />
+      {/* Animated glow — only when motion is allowed */}
+      {!prefersReducedMotion && (
+        <motion.div
+          className={styles.glow}
+          animate={{
+            scale: [1, 1.3, 1],
+            opacity: [0.3, 0.6, 0.3]
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: 'easeInOut'
+          }}
+        />
+      )}
       
-      {/* Pulse ring */}
-      <motion.div
-        className={styles.pulse}
-        animate={{
-          scale: [1, 1.5],
-          opacity: [0.5, 0]
-        }}
-        transition={{
-          duration: 2,
-          repeat: Infinity,
-          ease: 'easeOut'
-        }}
-      />
+      {/* Pulse ring — only when motion is allowed */}
+      {!prefersReducedMotion && (
+        <motion.div
+          className={styles.pulse}
+          animate={{
+            scale: [1, 1.5],
+            opacity: [0.5, 0]
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: 'easeOut'
+          }}
+        />
+      )}
     </motion.div>
   );
 }

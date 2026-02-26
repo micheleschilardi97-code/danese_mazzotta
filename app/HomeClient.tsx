@@ -1,32 +1,33 @@
 'use client';
 
 import { useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import Hero from "./(sections)/hero/Hero";
-import Servizi from "./(sections)/servizi/Servizi";
-import Contatti from "./(sections)/contatti/Contatti";
+
+// Lazy load below-fold sections — reduces initial JS bundle
+const Servizi = dynamic(() => import("./(sections)/servizi/Servizi"), {
+  loading: () => <section style={{ minHeight: '400px' }} />,
+});
+const Contatti = dynamic(() => import("./(sections)/contatti/Contatti"), {
+  loading: () => <section style={{ minHeight: '400px' }} />,
+});
 
 export default function HomeClient() {
+  // Event delegation for smooth scroll — single listener instead of N
   useEffect(() => {
-    const handleSmoothScroll = (e: Event) => {
-      const target = e.target as HTMLAnchorElement;
-      if (target.hash) {
+    const handleSmoothScroll = (e: MouseEvent) => {
+      const anchor = (e.target as HTMLElement).closest('a[href^="#"]') as HTMLAnchorElement | null;
+      if (anchor?.hash) {
         e.preventDefault();
-        const element = document.querySelector(target.hash);
+        const element = document.querySelector(anchor.hash);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }
     };
 
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-      link.addEventListener('click', handleSmoothScroll as EventListener);
-    });
-
-    return () => {
-      document.querySelectorAll('a[href^="#"]').forEach(link => {
-        link.removeEventListener('click', handleSmoothScroll as EventListener);
-      });
-    };
+    document.addEventListener('click', handleSmoothScroll);
+    return () => document.removeEventListener('click', handleSmoothScroll);
   }, []);
 
   return (

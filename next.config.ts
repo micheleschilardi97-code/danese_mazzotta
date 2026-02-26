@@ -5,6 +5,11 @@ const nextConfig: NextConfig = {
   
   // Compressione automatica dei response
   compress: true,
+
+  // Tree-shaking ottimizzato per barrel imports
+  experimental: {
+    optimizePackageImports: ['framer-motion', 'lucide-react'],
+  },
   
   // Ottimizzazione immagini
   images: {
