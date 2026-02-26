@@ -1,7 +1,8 @@
 import type { MetadataRoute } from 'next';
+import { config } from '@/config';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://studgiugno.it';
+  const baseUrl = config.seo.siteUrl;
   const currentDate = new Date();
   
   const staticPages = [
@@ -9,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/contatti', priority: 0.9, changeFreq: 'monthly' as const },
     { path: '/chi-siamo', priority: 0.8, changeFreq: 'monthly' as const },
     { path: '/servizi', priority: 0.9, changeFreq: 'weekly' as const },
+    { path: '/prenota-visita', priority: 0.95, changeFreq: 'monthly' as const },
     { path: '/testimonianze', priority: 0.7, changeFreq: 'weekly' as const },
     { path: '/faq', priority: 0.6, changeFreq: 'monthly' as const },
   ];

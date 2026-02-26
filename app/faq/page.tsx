@@ -1,9 +1,30 @@
 import type { Metadata } from 'next';
+import { config } from '@/config';
 import FAQ from '../(sections)/faq/FAQ';
 
 export const metadata: Metadata = {
   title: 'FAQ - Domande Frequenti',
-  description: 'Risposte alle domande più frequenti su implantologia, chirurgia orale e trattamenti dentali. Scopri tutto quello che devi sapere prima della tua visita.',
+  description: `Risposte alle domande più frequenti su implantologia, chirurgia orale e trattamenti dentali a Lecce. Scopri tutto su impianti dentali, durata, costi e procedure presso lo studio ${config.studio.dottore}.`,
+  keywords: [
+    'domande frequenti dentista lecce',
+    'faq implantologia lecce',
+    'impianti dentali domande lecce',
+    'quanto costa impianto dentale lecce',
+    'durata impianto dentale',
+    'chirurgia orale faq',
+  ],
+  alternates: {
+    canonical: `${config.seo.siteUrl}/faq`,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'it_IT',
+    siteName: config.seo.siteName,
+    url: `${config.seo.siteUrl}/faq`,
+    title: `FAQ — Domande Frequenti | ${config.studio.nomeBreve}`,
+    description: 'Risposte alle domande più frequenti su implantologia dentale, chirurgia orale e trattamenti a Lecce.',
+    images: [{ url: `${config.seo.siteUrl}${config.seo.ogImage}`, width: 1200, height: 630 }],
+  },
 };
 
 // Generate FAQ structured data

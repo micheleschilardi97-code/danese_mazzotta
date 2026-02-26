@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
+import { config } from '@/config';
 import { serviziData } from '@/app/(sections)/servizi/servizi.data';
 
 interface ServizioPageProps {
@@ -23,12 +24,26 @@ export async function generateMetadata({ params }: ServizioPageProps): Promise<M
   }
 
   return {
-    title: servizio.title,
-    description: servizio.description,
+    title: `${servizio.title} Lecce`,
+    description: `${servizio.description} Presso lo studio ${config.studio.dottore} a Lecce. Prima visita gratuita.`,
+    keywords: [
+      `${servizio.title.toLowerCase()} lecce`,
+      `${slug} lecce`,
+      'dentista lecce',
+      `${slug} studio dentistico lecce`,
+      config.studio.dottore.toLowerCase(),
+    ],
+    alternates: {
+      canonical: `${config.seo.siteUrl}/servizi/${slug}`,
+    },
     openGraph: {
-      title: servizio.title,
-      description: servizio.description,
+      title: `${servizio.title} | ${config.studio.nomeBreve} Lecce`,
+      description: `${servizio.description} Studio dentistico ${config.studio.dottore} a Lecce.`,
       type: 'website',
+      locale: 'it_IT',
+      siteName: config.seo.siteName,
+      url: `${config.seo.siteUrl}/servizi/${slug}`,
+      images: [{ url: `${config.seo.siteUrl}${config.seo.ogImage}`, width: 1200, height: 630 }],
     },
   };
 }
@@ -41,7 +56,31 @@ export default async function ServizioPage({ params }: ServizioPageProps) {
     notFound();
   }
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    "name": servizio.title,
+    "description": servizio.description,
+    "url": `${config.seo.siteUrl}/servizi/${slug}`,
+    "howPerformed": servizio.features.join('. '),
+    "provider": {
+      "@type": "DentalClinic",
+      "name": config.studio.nome,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lecce",
+        "addressRegion": "Puglia",
+        "addressCountry": "IT"
+      }
+    }
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
     <div style={{ 
       minHeight: 'calc(100vh - 80px)',
       padding: 'var(--space-16) var(--space-4)',
@@ -146,5 +185,6 @@ export default async function ServizioPage({ params }: ServizioPageProps) {
         </article>
       </div>
     </div>
+    </>
   );
 }

@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { config } from '@/config';
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -7,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin/'],
     },
-    sitemap: 'https://studgiugno.it/sitemap.xml',
+    sitemap: `${config.seo.siteUrl}/sitemap.xml`,
   };
 }
