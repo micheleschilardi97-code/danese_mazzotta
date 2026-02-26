@@ -4,14 +4,14 @@ export const footerData = {
   studio: {
     name: config.studio.nome,
     dottore: config.studio.dottore,
-    description: `Specializzazione in ${config.studio.specializzazione.toLowerCase()} nel cuore di Lecce.`
+    description: `Odontoiatria e protesi dentaria a Copertino, nel cuore del Salento.`
   },
   links: {
     servizi: [
-      { label: 'Implantologia', href: '/servizi/implantologia' },
-      { label: 'Chirurgia Orale', href: '/servizi/chirurgia-orale' },
-      { label: 'Estetica Dentale', href: '/servizi/estetica-dentale' },
-      { label: 'Protesi', href: '/servizi/protesi' }
+      { label: 'Laser Terapia', href: '/servizi/laser-terapia' },
+      { label: 'Parodontologia', href: '/servizi/parodontologia' },
+      { label: 'Impianti Dentali', href: '/servizi/impianti-dentali' },
+      { label: 'Ortodonzia', href: '/servizi/ortodonzia' }
     ],
     informazioni: [
       { label: 'Chi Siamo', href: '/chi-siamo' },

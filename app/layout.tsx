@@ -29,11 +29,11 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    template: `%s | ${config.studio.nome} — Lecce`,
-    default: `Dentista Lecce | ${config.studio.specializzazione} | Prima Visita Gratuita — ${config.studio.nomeBreve}`
+    template: `%s | ${config.studio.nome} — Copertino (Lecce)`,
+    default: `Dentista Copertino | ${config.studio.specializzazione} | Prenota Online — ${config.studio.nomeBreve}`
   },
-  description: `${config.studio.specializzazione} a Lecce. ${config.stats.anniEsperienza}+ anni esperienza, ${config.stats.pazientiSoddisfatti}+ pazienti soddisfatti. Prima visita gratuita. ☎️ ${config.contatti.telefono} — ${config.contatti.indirizzo}`,
-  keywords: ['dentista lecce', 'implantologia lecce', 'studio dentistico lecce', config.studio.dottore.toLowerCase(), 'prima visita gratuita dentista'],
+  description: `${config.studio.specializzazione} a Copertino (Lecce). ${config.stats.anniEsperienza}+ anni esperienza, ${config.stats.pazientiSoddisfatti}+ pazienti soddisfatti. Prenota online. ☎️ ${config.contatti.telefono} — ${config.contatti.indirizzo}`,
+  keywords: ['dentista copertino', 'studio dentistico copertino lecce', 'parodontologia lecce', config.studio.dottore.toLowerCase(), 'ortodonzia invisibile lecce'],
   authors: [{ name: config.studio.dottore }],
   creator: config.studio.nome,
   publisher: config.studio.nome,
@@ -56,13 +56,13 @@ export const metadata: Metadata = {
     locale: 'it_IT',
     siteName: config.seo.siteName,
     url: config.seo.siteUrl,
-    title: `Dentista Lecce | ${config.studio.specializzazione} | ${config.studio.nomeBreve}`,
-    description: `${config.studio.specializzazione} a Lecce. Prima visita gratuita. ${config.stats.anniEsperienza}+ anni esperienza. ☎️ ${config.contatti.telefono}`,
+    title: `Dentista Copertino | ${config.studio.specializzazione} | ${config.studio.nomeBreve}`,
+    description: `${config.studio.specializzazione} a Copertino (Lecce). Prenota online. ${config.stats.anniEsperienza}+ anni esperienza. ☎️ ${config.contatti.telefono}`,
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Dentista Lecce | ${config.studio.specializzazione} | ${config.studio.nomeBreve}`,
-    description: `${config.studio.specializzazione} a Lecce. Prima visita gratuita. ☎️ ${config.contatti.telefono}`,
+    title: `Dentista Copertino | ${config.studio.specializzazione} | ${config.studio.nomeBreve}`,
+    description: `${config.studio.specializzazione} a Copertino (Lecce). Prenota online. ☎️ ${config.contatti.telefono}`,
   },
   icons: {
     icon: '/icons/favicon.ico',
@@ -84,9 +84,9 @@ const structuredData = {
   "address": {
     "@type": "PostalAddress",
     "streetAddress": config.contatti.indirizzo.split(',')[0],
-    "addressLocality": "Lecce",
+    "addressLocality": "Copertino",
     "addressRegion": "Puglia",
-    "postalCode": "73100",
+    "postalCode": "73043",
     "addressCountry": "IT"
   },
   "geo": {
@@ -121,37 +121,42 @@ const structuredData = {
       "closes": "13:00"
     }
   ],
-  "medicalSpecialty": ["Implantologia Dentale", "Chirurgia Orale", "Estetica Dentale"],
+  "medicalSpecialty": ["Parodontologia", "Ortodonzia", "Implantologia Dentale", "Endodonzia", "Laser Terapia"],
   "availableService": [
-    {
-      "@type": "MedicalProcedure",
-      "name": "Impianti Dentali",
-      "description": "Implantologia avanzata con sedazione cosciente"
-    },
-    {
-      "@type": "MedicalProcedure",
-      "name": "Chirurgia Orale",
-      "description": "Interventi di chirurgia orale e maxillo-facciale"
-    },
-    {
-      "@type": "MedicalProcedure",
-      "name": "Estetica Dentale",
-      "description": "Trattamenti estetici per il sorriso perfetto"
-    },
-    {
-      "@type": "MedicalProcedure",
-      "name": "Bonifica Dentale",
-      "description": "Rimozione protesi incongrue e bonifica odontoiatrica"
-    },
-    {
-      "@type": "MedicalProcedure",
-      "name": "Protesi Dentale",
-      "description": "Protesi fisse e mobili personalizzate"
-    },
     {
       "@type": "MedicalProcedure",
       "name": "Laser Terapia",
       "description": "Trattamenti con tecnologia laser di ultima generazione"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Parodontologia",
+      "description": "Diagnosi e trattamento delle malattie parodontali con approccio rigenerativo"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Igiene Dentale",
+      "description": "Pulizia professionale e prevenzione"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Impianti Dentali",
+      "description": "Chirurgia orale e implantare avanzata"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Ortodonzia",
+      "description": "Ortodonzia invisibile con sistema All-in e apparecchi tradizionali"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Endodonzia",
+      "description": "Trattamenti endodontici di precisione con sistemi di ingrandimento"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Sbiancamento Dentale",
+      "description": "Sbiancamento professionale per un sorriso luminoso"
     }
   ],
   "hasOfferCatalog": {

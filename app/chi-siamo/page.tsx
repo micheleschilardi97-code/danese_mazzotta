@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: 'Chi Siamo',
   description: `Scopri il ${config.studio.dottore} e il nostro studio dentistico a Lecce. Oltre ${config.stats.anniEsperienza} anni di esperienza in implantologia e chirurgia orale con tecnologie all'avanguardia.`,
   keywords: [
-    'dentista lecce chi siamo',
-    'dott mario giugno lecce',
-    'studio dentistico lecce',
-    'implantologia lecce esperienza',
-    'chirurgia orale lecce',
-    'odontoiatra lecce',
+    'dentista copertino chi siamo',
+    'studio dentistico di tanna cairo',
+    'studio dentistico copertino lecce',
+    'parodontologia lecce',
+    'ortodonzia invisibile lecce',
+    'odontoiatra copertino',
   ],
   alternates: {
     canonical: `${config.seo.siteUrl}/chi-siamo`,

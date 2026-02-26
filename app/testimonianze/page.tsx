@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: 'Testimonianze e Recensioni',
   description: `Leggi le recensioni e le esperienze dei pazienti dello studio ${config.studio.dottore} a Lecce. ${config.stats.pazientiSoddisfatti}+ pazienti soddisfatti, valutazione ${config.stats.recensioni5Stelle}/5.`,
   keywords: [
-    'recensioni dentista lecce',
-    'testimonianze dentista lecce',
-    'opinioni studio dentistico lecce',
+    'recensioni dentista copertino',
+    'testimonianze dentista copertino lecce',
+    'opinioni studio dentistico copertino',
     'pazienti soddisfatti dentista lecce',
-    'recensioni implantologia lecce',
-    'dott mario giugno recensioni',
+    'recensioni studio di tanna cairo',
+    'studio dentistico di tanna cairo recensioni',
   ],
   alternates: {
     canonical: `${config.seo.siteUrl}/testimonianze`,

@@ -138,8 +138,8 @@ export default function Hero() {
         <div className={styles.doctorImageBackground}>
           {isMobile ? (
             <Image
-              src="/images/dentista-mobile.png"
-              alt="Dr. Mario Giugno - Studio dentistico a Lecce"
+              src="/images/studio_2.png"
+              alt="Studio Dentistico Di Tanna Cairo - Copertino Lecce"
               fill
               priority
               quality={85}
@@ -150,8 +150,8 @@ export default function Hero() {
             />
           ) : (
             <Image
-              src="/images/studio-dentistico-bg.jpg.png"
-              alt="Studio dentistico a Lecce"
+              src="/images/studio_2.png"
+              alt="Studio Dentistico Di Tanna Cairo - Copertino Lecce"
               fill
               priority
               quality={90}

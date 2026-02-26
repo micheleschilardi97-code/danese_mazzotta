@@ -42,7 +42,7 @@ export default function About() {
               )}
               <img
                 src={aboutData.image}
-                alt="Dott. Mario Giugno"
+                alt="Studio Dentistico Di Tanna Cairo"
                 loading="lazy"
               />
             </picture>

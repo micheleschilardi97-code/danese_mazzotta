@@ -24,21 +24,21 @@ export async function generateMetadata({ params }: ServizioPageProps): Promise<M
   }
 
   return {
-    title: `${servizio.title} Lecce`,
-    description: `${servizio.description} Presso lo studio ${config.studio.dottore} a Lecce. Prima visita gratuita.`,
+    title: `${servizio.title} Copertino Lecce`,
+    description: `${servizio.description} Presso lo studio ${config.studio.dottore} a Copertino (Lecce).`,
     keywords: [
-      `${servizio.title.toLowerCase()} lecce`,
-      `${slug} lecce`,
-      'dentista lecce',
-      `${slug} studio dentistico lecce`,
+      `${servizio.title.toLowerCase()} copertino`,
+      `${slug} copertino lecce`,
+      'dentista copertino',
+      `${slug} studio dentistico copertino`,
       config.studio.dottore.toLowerCase(),
     ],
     alternates: {
       canonical: `${config.seo.siteUrl}/servizi/${slug}`,
     },
     openGraph: {
-      title: `${servizio.title} | ${config.studio.nomeBreve} Lecce`,
-      description: `${servizio.description} Studio dentistico ${config.studio.dottore} a Lecce.`,
+      title: `${servizio.title} | ${config.studio.nomeBreve} Copertino`,
+      description: `${servizio.description} Studio dentistico ${config.studio.dottore} a Copertino (Lecce).`,
       type: 'website',
       locale: 'it_IT',
       siteName: config.seo.siteName,

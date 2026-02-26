@@ -182,8 +182,8 @@ export const PHONE_FORMAT = {
 
 // SEO & Meta
 export const SEO_CONFIG = {
-  TITLE_TEMPLATE: '%s | Studio Dentistico Dott. Mario Giugno',
-  DEFAULT_TITLE: 'Dentista Lecce | Impianti Senza Dolore',
+  TITLE_TEMPLATE: '%s | Studio Dentistico Di Tanna Cairo',
+  DEFAULT_TITLE: 'Dentista Copertino Lecce | Studio Di Tanna Cairo',
   DESCRIPTION_LENGTH: { MIN: 120, MAX: 160 },
   OG_IMAGE_SIZE: { WIDTH: 1200, HEIGHT: 630 },
 } as const;

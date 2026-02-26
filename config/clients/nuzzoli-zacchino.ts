@@ -1,4 +1,4 @@
-import type { ClientConfig } from './mario-giugno';
+import type { ClientConfig } from './ditanna-cairo';
 
 export const clientConfig: ClientConfig = {
   // Informazioni Studio

@@ -15,7 +15,7 @@ export const testimonianzeData: Testimonianza[] = [
     role: 'Paziente dal 2020',
     avatar: '',
     rating: 5,
-    text: 'Esperienza eccellente! Il Dott. Giugno è stato molto professionale e attento. L\'impianto dentale è stato un successo completo e ora posso sorridere con fiducia.',
+    text: 'Esperienza eccellente! I dottori Di Tanna e Cairo sono molto professionali e attenti. Il trattamento è stato un successo completo e ora posso sorridere con fiducia.',
     date: '2024-01-15'
   },
   {
@@ -33,7 +33,7 @@ export const testimonianzeData: Testimonianza[] = [
     role: 'Paziente dal 2021',
     avatar: '',
     rating: 5,
-    text: 'Avevo paura del dentista, ma il Dott. Giugno mi ha messo subito a mio agio. Il trattamento è stato praticamente indolore e il risultato è fantastico.',
+    text: 'Avevo paura del dentista, ma i dottori Di Tanna e Cairo mi hanno messo subito a mio agio. Il trattamento è stato praticamente indolore e il risultato è fantastico.',
     date: '2024-01-05'
   },
   {
@@ -51,7 +51,7 @@ export const testimonianzeData: Testimonianza[] = [
     role: 'Paziente dal 2022',
     avatar: '',
     rating: 5,
-    text: 'Studio moderno, pulito e accogliente. Il Dott. Giugno è molto scrupoloso e spiega ogni passaggio del trattamento. Risultati oltre le aspettative!',
+    text: 'Studio moderno, pulito e accogliente. I dottori sono molto scrupolosi e spiegano ogni passaggio del trattamento. Risultati oltre le aspettative!',
     date: '2023-12-20'
   }
 ];

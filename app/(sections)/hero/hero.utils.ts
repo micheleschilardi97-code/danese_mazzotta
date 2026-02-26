@@ -184,7 +184,7 @@ export const generateHeroStructuredData = (data: any) => {
   return {
     '@context': 'https://schema.org',
     '@type': 'MedicalBusiness',
-    'name': 'Studio Dentistico Dott. Mario Giugno',
+    'name': 'Studio Dentistico Di Tanna Cairo',
     'description': data.subtitle,
     'telephone': data.phoneNumber,
     'priceRange': '$$',

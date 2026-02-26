@@ -16,12 +16,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const servizi = [
-    { slug: 'implantologia', priority: 0.9 },
-    { slug: 'chirurgia-orale', priority: 0.85 },
-    { slug: 'estetica-dentale', priority: 0.8 },
-    { slug: 'bonifica-dentale', priority: 0.8 },
-    { slug: 'protesi', priority: 0.75 },
-    { slug: 'laser-dentale', priority: 0.75 },
+    { slug: 'laser-terapia', priority: 0.9 },
+    { slug: 'parodontologia', priority: 0.9 },
+    { slug: 'igiene-dentale', priority: 0.85 },
+    { slug: 'impianti-dentali', priority: 0.85 },
+    { slug: 'ortodonzia', priority: 0.85 },
+    { slug: 'endodonzia', priority: 0.8 },
+    { slug: 'sbiancamento-dentale', priority: 0.8 },
   ];
 
   return [

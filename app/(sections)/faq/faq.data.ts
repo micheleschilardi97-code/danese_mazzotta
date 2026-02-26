@@ -7,43 +7,43 @@ export interface FAQItem {
 export const faqData: FAQItem[] = [
   {
     id: '1',
-    question: 'Gli impianti dentali sono dolorosi?',
-    answer: 'Gli impianti dentali vengono posizionati in anestesia locale, quindi la procedura è indolore. Dopo l\'intervento, eventuali fastidi sono gestibili con comuni analgesici e tendono a scomparire in pochi giorni.'
+    question: 'Cos\'è la laser terapia dentale?',
+    answer: 'La laser terapia è una tecnica innovativa che utilizza la luce laser per trattare diverse patologie del cavo orale. È minimamente invasiva, riduce il sanguinamento e accelera i tempi di guarigione rispetto alle tecniche tradizionali.'
   },
   {
     id: '2',
+    question: 'Come si cura la parodontite?',
+    answer: 'La parodontite si cura con un approccio personalizzato che può includere igiene professionale profonda, levigatura radicolare, terapia rigenerativa e, nei casi più avanzati, interventi chirurgici mini-invasivi. Il nostro studio è specializzato in rigenerazione ossea parodontale.'
+  },
+  {
+    id: '3',
+    question: 'Cos\'è l\'ortodonzia invisibile All-in?',
+    answer: 'All-in è il primo sistema italiano di ortodonzia invisibile mediante mascherine trasparenti. Permette di riallineare i denti in modo discreto, senza l\'utilizzo di apparecchi metallici visibili. La Dott.ssa Cairo è certificata All-in.'
+  },
+  {
+    id: '4',
     question: 'Quanto dura un impianto dentale?',
     answer: 'Con una corretta igiene orale e controlli periodici, un impianto dentale può durare anche tutta la vita. Gli impianti in titanio hanno un tasso di successo superiore al 95% a 10 anni.'
   },
   {
-    id: '3',
-    question: 'Quanto tempo richiede l\'intero trattamento implantologico?',
-    answer: 'Il tempo varia in base al caso specifico. In media, il processo completo richiede 3-6 mesi, includendo l\'osteointegrazione. In alcuni casi è possibile il carico immediato, con protesi provvisoria lo stesso giorno dell\'intervento.'
-  },
-  {
-    id: '4',
-    question: 'Gli impianti dentali sono sicuri?',
-    answer: 'Sì, l\'implantologia dentale è una procedura sicura e consolidata con oltre 50 anni di storia. Utilizziamo materiali biocompatibili certificati e tecnologie digitali per massima precisione e sicurezza.'
-  },
-  {
     id: '5',
-    question: 'Cosa fare prima dell\'intervento?',
-    answer: 'È importante seguire una buona igiene orale e arrivare a digiuno se verrà utilizzata sedazione cosciente. Durante la visita preliminare forniremo tutte le istruzioni specifiche per la preparazione.'
+    question: 'Ogni quanto bisogna fare l\'igiene dentale?',
+    answer: 'Si consiglia un\'igiene dentale professionale ogni 6 mesi, ma la frequenza può variare in base alle condizioni del singolo paziente. Durante la visita valuteremo insieme il programma di prevenzione più adatto.'
   },
   {
     id: '6',
-    question: 'L\'età è un limite per gli impianti dentali?',
-    answer: 'Non esiste un limite di età superiore per gli impianti. Ciò che conta è lo stato di salute generale e la qualità dell\'osso. Valutiamo ogni caso singolarmente per garantire il miglior risultato.'
+    question: 'Lo sbiancamento dentale è sicuro?',
+    answer: 'Sì, lo sbiancamento professionale eseguito in studio è sicuro e non danneggia lo smalto. Utilizziamo prodotti certificati e personalizzati per ottenere un risultato naturale e duraturo.'
   },
   {
     id: '7',
-    question: 'Accettate pagamenti rateali?',
-    answer: 'Sì, offriamo soluzioni di pagamento flessibili e dilazionato per rendere i trattamenti accessibili. Durante la prima visita discuteremo insieme il piano finanziario più adatto alle vostre esigenze.'
+    question: 'Che tecnologie utilizzate nello studio?',
+    answer: 'Disponiamo di un panoramico digitale di ultima generazione, sistemi di ingrandimento per garantire la massima precisione e una videocamera intraorale per una comunicazione più efficace con il paziente.'
   },
   {
     id: '8',
-    question: 'Fornite garanzie sui trattamenti?',
-    answer: 'Sì, forniamo garanzia scritta su tutti i trattamenti implantologici. La durata e le condizioni specifiche vengono discusse e concordate prima dell\'inizio del trattamento.'
+    question: 'Come posso prenotare una visita?',
+    answer: 'Puoi prenotare online direttamente dal nostro sito, chiamare al 333 445 8620, oppure compilare il modulo di contatto. Ti ricontatteremo al più presto per fissare l\'appuntamento.'
   }
 ];
 

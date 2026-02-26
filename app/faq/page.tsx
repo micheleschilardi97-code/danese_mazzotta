@@ -4,14 +4,14 @@ import FAQ from '../(sections)/faq/FAQ';
 
 export const metadata: Metadata = {
   title: 'FAQ - Domande Frequenti',
-  description: `Risposte alle domande più frequenti su implantologia, chirurgia orale e trattamenti dentali a Lecce. Scopri tutto su impianti dentali, durata, costi e procedure presso lo studio ${config.studio.dottore}.`,
+  description: `Risposte alle domande più frequenti su parodontologia, ortodonzia, impianti dentali e trattamenti dentali a Copertino (Lecce). Scopri tutto sui nostri servizi presso lo studio ${config.studio.dottore}.`,
   keywords: [
-    'domande frequenti dentista lecce',
-    'faq implantologia lecce',
-    'impianti dentali domande lecce',
-    'quanto costa impianto dentale lecce',
-    'durata impianto dentale',
-    'chirurgia orale faq',
+    'domande frequenti dentista copertino',
+    'faq studio dentistico copertino lecce',
+    'impianti dentali domande',
+    'parodontologia domande',
+    'ortodonzia invisibile faq',
+    'sbiancamento dentale faq',
   ],
   alternates: {
     canonical: `${config.seo.siteUrl}/faq`,

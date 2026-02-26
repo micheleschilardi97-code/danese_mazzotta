@@ -25,7 +25,7 @@ export const heroData = {
   // ═══════════════════════════════════════════════════════════════
   backgroundVideo: "/videos/studio-dentistico.mp4",
   backgroundVideoMobile: "/videos/studio-dentistico-mobile.mp4",
-  backgroundImage: "/images/studio-hero-poster.jpg",
+  backgroundImage: "/images/studio_2.png",
   
   // ═══════════════════════════════════════════════════════════════
   // TRUST BADGES (Above headline - CRITICAL positioning)
@@ -66,10 +66,10 @@ export const heroData = {
     displayDuration: 5000, // 5 seconds
     initialDelay: 3000, // First after 3s
     recentPatients: [
-      { name: "Maria R.", city: "Lecce", service: "Impianto dentale", rating: 5, timeAgo: "2 ore fa" },
-      { name: "Giuseppe T.", city: "Surbo", service: "Prima visita", rating: 5, timeAgo: "5 ore fa" },
-      { name: "Anna M.", city: "Lecce", service: "Sbiancamento", rating: 5, timeAgo: "1 giorno fa" },
-      { name: "Marco L.", city: "Lecce", service: "Impianto dentale", rating: 5, timeAgo: "3 ore fa" }
+      { name: "Maria R.", city: "Copertino", service: "Parodontologia", rating: 5, timeAgo: "2 ore fa" },
+      { name: "Giuseppe T.", city: "Leverano", service: "Impianto dentale", rating: 5, timeAgo: "5 ore fa" },
+      { name: "Anna M.", city: "Nardò", service: "Sbiancamento", rating: 5, timeAgo: "1 giorno fa" },
+      { name: "Marco L.", city: "Copertino", service: "Ortodonzia invisibile", rating: 5, timeAgo: "3 ore fa" }
     ]
   },
   
@@ -84,16 +84,16 @@ export const heroData = {
   phoneNumber: configHero.ctaSecondary.text,
   phoneHref: configHero.ctaSecondary.href,
   phoneText: "CHIAMA ORA",
-  phoneSubtext: "Lun-Ven 8:00-20:00 · Risposta immediata",
+  phoneSubtext: "Lun-Sab · Risposta immediata",
   phoneAriaLabel: `Chiama ora al ${configHero.ctaSecondary.text}`,
   
   // ═══════════════════════════════════════════════════════════════
   // SEO & SCHEMA.ORG DATA
   // ═══════════════════════════════════════════════════════════════
   seo: {
-    title: "Dentista Lecce | Impianti Senza Dolore | Prima Visita Gratis",
-    description: "Studio Dentistico Dott. Mario Giugno. Impianti dentali con tecnologia 3D e sedazione cosciente. 15+ anni esperienza, 2000+ pazienti felici. Prima visita GRATIS.",
-    keywords: ["dentista lecce", "impianti dentali", "sedazione cosciente", "prima visita gratis"]
+    title: "Dentista Copertino Lecce | Studio Dentistico Di Tanna Cairo | Prenota Online",
+    description: "Studio Dentistico Di Tanna Cairo a Copertino (LE). Parodontologia, ortodonzia invisibile, implantologia, laser terapia. Dott. Di Tanna Fernando e Dott.ssa Cairo Maria Giovanna.",
+    keywords: ["dentista copertino", "studio dentistico copertino lecce", "parodontologia lecce", "ortodonzia invisibile lecce"]
   },
   
   // ═══════════════════════════════════════════════════════════════

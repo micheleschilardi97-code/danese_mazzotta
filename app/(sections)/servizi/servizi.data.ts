@@ -11,57 +11,66 @@ export interface Servizio {
 export const serviziData: Servizio[] = [
   {
     id: '1',
-    slug: 'implantologia',
-    icon: 'tooth',
-    title: 'Implantologia Dentale',
-    description: 'Impianti dentali di ultima generazione per sostituire i denti mancanti con soluzioni permanenti e naturali.',
-    features: ['Impianti in titanio', 'Carico immediato', 'All-on-4 e All-on-6'],
-    backgroundImage: '/images/servizi/implantologia.jpg'
+    slug: 'laser-terapia',
+    icon: 'laser',
+    title: 'Laser Terapia',
+    description: 'Trattamenti con tecnologia laser di ultima generazione per interventi minimamente invasivi, più rapidi e con tempi di guarigione ridotti.',
+    features: ['Trattamenti minimamente invasivi', 'Guarigione rapida', 'Massimo comfort'],
+    backgroundImage: '/images/servizi/laser-terapia.jpg'
   },
   {
     id: '2',
-    slug: 'chirurgia-orale',
-    icon: 'surgery',
-    title: 'Chirurgia Orale',
-    description: 'Interventi di chirurgia orale avanzata, dalle estrazioni complesse alla rigenerazione ossea.',
-    features: ['Estrazioni complesse', 'Rialzo del seno mascellare', 'Innesti ossei'],
-    backgroundImage: '/images/servizi/chirurgia.jpg'
+    slug: 'parodontologia',
+    icon: 'shield',
+    title: 'Parodontologia',
+    description: 'Diagnosi e trattamento delle malattie parodontali con approccio rigenerativo. Specializzazione in rigenerazione ossea.',
+    features: ['Rigenerazione ossea', 'Terapia parodontale', 'Mantenimento gengivale'],
+    backgroundImage: '/images/servizi/parodontologia.jpg'
   },
   {
     id: '3',
-    slug: 'estetica-dentale',
+    slug: 'igiene-dentale',
     icon: 'smile',
-    title: 'Estetica Dentale',
-    description: 'Sbiancamento professionale, faccette e trattamenti estetici per un sorriso perfetto.',
-    features: ['Sbiancamento LED', 'Faccette in ceramica', 'Bonding estetico'],
-    backgroundImage: '/images/servizi/estetica.jpg'
+    title: 'Igiene Dentale',
+    description: 'Pulizia professionale e programmi di prevenzione personalizzati per mantenere una bocca sana e un sorriso splendente.',
+    features: ['Pulizia professionale', 'Programmi di prevenzione', 'Educazione all\'igiene orale'],
+    backgroundImage: '/images/servizi/igiene-dentale.jpg'
   },
   {
     id: '4',
-    slug: 'bonifica-dentale',
-    icon: 'shield',
-    title: 'Bonifica Dentale',
-    description: 'Trattamenti conservativi per eliminare carie e infezioni preservando i denti naturali.',
-    features: ['Cura carie', 'Devitalizzazioni', 'Endodonzia'],
-    backgroundImage: '/images/servizi/bonifica.jpg'
+    slug: 'impianti-dentali',
+    icon: 'tooth',
+    title: 'Impianti Dentali',
+    description: 'Chirurgia orale e implantare avanzata per sostituire i denti mancanti con soluzioni permanenti e naturali.',
+    features: ['Impianti in titanio', 'Chirurgia implantare', 'Innesti ossei'],
+    backgroundImage: '/images/servizi/impianti-dentali.jpg'
   },
   {
     id: '5',
-    slug: 'protesi',
+    slug: 'ortodonzia',
     icon: 'dental',
-    title: 'Protesi Dentali',
-    description: 'Protesi fisse e mobili di alta qualità per ripristinare funzionalità ed estetica.',
-    features: ['Corone e ponti', 'Protesi mobili', 'Protesi su impianti'],
-    backgroundImage: '/images/servizi/protesi.jpg'
+    title: 'Ortodonzia',
+    description: 'Ortodonzia invisibile con sistema All-in, il primo sistema italiano di mascherine trasparenti, e apparecchi tradizionali.',
+    features: ['Mascherine All-in', 'Ortodonzia invisibile', 'Apparecchi tradizionali'],
+    backgroundImage: '/images/servizi/ortodonzia.jpg'
   },
   {
     id: '6',
-    slug: 'ortodonzia',
-    icon: 'laser',
-    title: 'Ortodonzia Invisibile',
-    description: 'Apparecchi ortodontici invisibili e tradizionali per riallineare i denti.',
-    features: ['Invisalign', 'Apparecchi fissi', 'Bite e contenzioni'],
-    backgroundImage: '/images/servizi/ortodonzia.jpg'
+    slug: 'endodonzia',
+    icon: 'surgery',
+    title: 'Endodonzia',
+    description: 'Trattamenti endodontici di precisione con sistemi di ingrandimento per salvare i denti naturali compromessi.',
+    features: ['Devitalizzazioni', 'Ritrattamenti', 'Microscopia operatoria'],
+    backgroundImage: '/images/servizi/endodonzia.jpg'
+  },
+  {
+    id: '7',
+    slug: 'sbiancamento-dentale',
+    icon: 'star',
+    title: 'Sbiancamento Dentale',
+    description: 'Sbiancamento professionale per donare luminosità e brillantezza al tuo sorriso in modo sicuro e duraturo.',
+    features: ['Sbiancamento professionale', 'Risultati duraturi', 'Trattamento sicuro'],
+    backgroundImage: '/images/servizi/sbiancamento.jpg'
   }
 ];
 

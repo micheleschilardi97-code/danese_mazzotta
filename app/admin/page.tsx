@@ -252,7 +252,7 @@ export default function AdminDashboard() {
             </div>
             <div>
               <h1 className={styles.brandTitle}>Dashboard Prenotazioni</h1>
-              <p className={styles.brandSub}>Studio Dr. Giugno — Area Riservata</p>
+              <p className={styles.brandSub}>Studio Di Tanna Cairo — Area Riservata</p>
             </div>
           </div>
 

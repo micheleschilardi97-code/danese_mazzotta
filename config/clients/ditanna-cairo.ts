@@ -166,10 +166,10 @@ export const clientConfig: ClientConfig = {
   // Immagini specifiche
   images: {
     logo: "/images/logo-ditanna-cairo.png",
-    heroBg: "/images/studio-dentistico-bg.jpg.png",
-    heroMobile: "/images/dentista-mobile.png",
-    doctor: "/images/studio-dentistico-bg.jpg.png",
-    doctorMobile: "/images/dentista-mobile.png"
+    heroBg: "/images/studio_2.png",
+    heroMobile: "/images/studio_2.png",
+    doctor: "/images/studio_2.png",
+    doctorMobile: "/images/studio_2.png"
   },
 
   // Colori brand (opzionale - per personalizzazione colori)

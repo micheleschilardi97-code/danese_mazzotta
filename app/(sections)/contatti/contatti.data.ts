@@ -51,12 +51,13 @@ export const contattiData = {
       messaggio: 'Messaggio'
     },
     servizi: [
-      'Implantologia Dentale',
-      'Chirurgia Orale',
-      'Estetica Dentale',
-      'Bonifica Dentale',
-      'Protesi Dentali',
-      'Laser Dentale',
+      'Laser Terapia',
+      'Parodontologia',
+      'Igiene Dentale',
+      'Impianti Dentali',
+      'Ortodonzia',
+      'Endodonzia',
+      'Sbiancamento Dentale',
       'Altro'
     ],
     submitButton: 'Invia Richiesta',

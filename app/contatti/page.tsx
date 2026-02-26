@@ -4,14 +4,14 @@ import { config } from '@/config';
 
 export const metadata: Metadata = {
   title: 'Contatti',
-  description: `Contatta lo ${config.studio.nome} a Lecce. Prenota la tua visita o richiedi informazioni. ☎️ ${config.contatti.telefono} — ${config.contatti.indirizzo}`,
+  description: `Contatta lo ${config.studio.nome} a Copertino (Lecce). Prenota la tua visita o richiedi informazioni. ☎️ ${config.contatti.telefono} — ${config.contatti.indirizzo}`,
   keywords: [
-    'contatti dentista lecce',
-    'studio dentistico lecce contatti',
-    'telefono dentista lecce',
-    'indirizzo dentista lecce',
-    'prenotazione dentista lecce',
-    'dentista lecce via esempio',
+    'contatti dentista copertino',
+    'studio dentistico copertino contatti',
+    'telefono dentista copertino lecce',
+    'indirizzo dentista copertino',
+    'prenotazione dentista copertino',
+    'dentista via oronzo quarta copertino',
   ],
   alternates: {
     canonical: `${config.seo.siteUrl}/contatti`,

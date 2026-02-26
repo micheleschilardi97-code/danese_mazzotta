@@ -1,12 +1,12 @@
-import type { ClientConfig } from './clients/mario-giugno';
+import type { ClientConfig } from './clients/ditanna-cairo';
 
 // Import client configs
-import { clientConfig as marioGiugnoConfig } from './clients/mario-giugno';
+import { clientConfig as ditannoCairoConfig } from './clients/ditanna-cairo';
 import { clientConfig as nuzzoliZacchinoConfig } from './clients/nuzzoli-zacchino';
 
 // Map of available clients
 const clients = {
-  'mario-giugno': marioGiugnoConfig,
+  'ditanna-cairo': ditannoCairoConfig,
   'nuzzoli-zacchino': nuzzoliZacchinoConfig,
 } as const;
 
@@ -14,14 +14,14 @@ export type ClientId = keyof typeof clients;
 
 /**
  * Get the active client configuration based on environment variable
- * Default: mario-giugno
+ * Default: ditanna-cairo
  */
 export function getClientConfig(): ClientConfig {
-  const clientId = (process.env.NEXT_PUBLIC_CLIENT_ID || 'mario-giugno') as ClientId;
+  const clientId = (process.env.NEXT_PUBLIC_CLIENT_ID || 'ditanna-cairo') as ClientId;
   
   if (!clients[clientId]) {
-    console.warn(`Client "${clientId}" not found, falling back to mario-giugno`);
-    return clients['mario-giugno'];
+    console.warn(`Client "${clientId}" not found, falling back to ditanna-cairo`);
+    return clients['ditanna-cairo'];
   }
   
   return clients[clientId];
