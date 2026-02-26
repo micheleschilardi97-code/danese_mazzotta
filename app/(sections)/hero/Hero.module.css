@@ -274,44 +274,62 @@
   z-index: 6;
 }
 
-/* Mobile: padding ottimizzato e typography premium */
+/* ================================
+   MOBILE HERO — Elegant & Professional
+   ================================ */
 @media (max-width: 767px) {
   .heroContent {
-    padding-top: calc(64px + 5rem);
-    padding-left: var(--space-4);
-    padding-right: var(--space-4);
+    padding: calc(var(--navbar-height-mobile, 64px) + 3rem) var(--space-4) var(--space-8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - var(--navbar-height-mobile, 64px));
   }
 
   .doctorImageBackground {
-    opacity: 0.5;
+    opacity: 0.35;
   }
 
+  /* Darker overlay for better text legibility on mobile */
   .heroBackground::after {
     background: linear-gradient(
-      135deg,
-      rgba(10, 14, 39, 0.75) 0%,
-      rgba(10, 14, 39, 0.72) 30%,
-      rgba(26, 26, 46, 0.70) 60%,
-      rgba(0, 212, 170, 0.12) 85%,
-      rgba(212, 175, 55, 0.08) 100%
+      180deg,
+      rgba(10, 14, 39, 0.92) 0%,
+      rgba(10, 14, 39, 0.85) 40%,
+      rgba(10, 14, 39, 0.80) 70%,
+      rgba(0, 212, 170, 0.08) 100%
     );
   }
 
   .heroTitle {
-    font-size: clamp(1.5rem, 6vw, 2rem);
-    margin-bottom: var(--space-5);
-    letter-spacing: -0.025em;
+    font-size: clamp(1.75rem, 7.5vw, 2.25rem);
+    margin-bottom: var(--space-3);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  .heroTitleLine {
+    margin-bottom: 0.5rem;
   }
 
   .heroTitleHighlight {
-    font-size: clamp(1.35rem, 5.5vw, 1.85rem);
+    font-size: clamp(1.5rem, 6.5vw, 2rem);
     filter: drop-shadow(0 0 20px rgba(0, 212, 170, 0.5)) drop-shadow(0 0 10px rgba(212, 175, 55, 0.25));
   }
 
   .heroTitleHighlight::after {
     height: 3px;
-    bottom: -10px;
+    bottom: -8px;
     box-shadow: 0 0 14px rgba(0, 212, 170, 0.7), 0 0 10px rgba(212, 175, 55, 0.4);
+  }
+
+  .heroSubtitle {
+    font-size: clamp(0.875rem, 3.8vw, 1rem);
+    margin-bottom: var(--space-6);
+    line-height: 1.7;
+    max-width: 90%;
+    letter-spacing: 0.01em;
   }
 }
 
@@ -375,18 +393,21 @@
               inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
-/* Mobile: certifications ottimizzate */
+/* Mobile: certifications — clean compact grid */
 @media (max-width: 767px) {
   .certifications {
-    gap: var(--space-2-5);
-    max-width: 100%;
-    padding: 0 var(--space-2);
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 0.5rem;
+    max-width: 380px;
+    padding: 0;
+    margin-bottom: var(--space-4);
   }
 
   .certification {
-    font-size: 0.7rem;
-    padding: var(--space-2) var(--space-2-5);
-    letter-spacing: 0.06em;
+    font-size: 0.65rem;
+    padding: 0.5rem 0.625rem;
+    letter-spacing: 0.05em;
+    border-radius: var(--radius-sm);
   }
 
   .certification:active {
@@ -623,25 +644,36 @@
   perspective: 1000px;
 }
 
-/* Mobile: spacing ottimizzato e touch-friendly */
+/* Mobile: trust badges in 2-column grid, elegant & readable */
 @media (max-width: 767px) {
   .trustBadges {
-    gap: var(--space-3-5);
-    row-gap: var(--space-3);
-    padding: 0 var(--space-2);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    padding: 0;
+    margin-bottom: var(--space-4);
+    width: 100%;
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .trustBadge {
-    padding: var(--space-2-5) var(--space-4);
-    font-size: 0.8rem;
-    gap: var(--space-2);
+    padding: 0.65rem 0.75rem;
+    font-size: 0.78rem;
+    gap: 0.5rem;
     min-height: 44px;
-    border-width: 1.5px;
+    border-width: 1px;
+    border-radius: var(--radius-sm);
+    justify-content: center;
+    text-align: center;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
   }
 
   .trustBadge svg {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
   }
 }
 
@@ -1331,30 +1363,38 @@
   opacity: 1;
 }
 
+/* Mobile: CTA booking — full-width, prominent */
 @media (max-width: 639px) {
   .ctaWrapper {
-    margin-top: var(--space-8);
-    padding: 0 1.25rem;
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-4);
+    padding: 0 1rem;
+    width: 100%;
   }
 
   .bookingCta {
-    padding: 1.05rem 1.75rem;
+    padding: 1rem 1.5rem;
     gap: 0.85rem;
     width: 100%;
-    max-width: 380px;
+    max-width: 100%;
+    border-radius: var(--radius-md);
+    justify-content: center;
   }
 
   .bookingIcon svg {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
   }
 
   .bookingTitle {
     font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
   }
 
   .bookingBadge {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    font-weight: 800;
   }
 }
 
@@ -1402,143 +1442,50 @@
   filter: drop-shadow(0 0 8px rgba(0, 212, 170, 0.4));
 }
 
-/* Mobile Extra Small - 320px to 480px */
+/* ================================
+   MOBILE EXTRA SMALL — 320px to 480px
+   ================================ */
 @media (max-width: 480px) {
   .heroContent {
-    /* ensure hero content starts well below the navbar on very small devices */
-    padding: calc(var(--navbar-height-mobile) + 2rem) var(--space-2) var(--space-5);
-  }
-
-  .hero {
-    /* reduce hero viewport height so content starts below fixed navbar */
-    min-height: calc(100vh - (var(--navbar-height-mobile) + env(safe-area-inset-top, 0px)));
+    padding: calc(var(--navbar-height-mobile, 64px) + 2.5rem) var(--space-3) var(--space-6);
   }
 
   .heroTitle {
-    font-size: clamp(1.35rem, 7vw, 1.65rem);
-    margin-bottom: var(--space-5);
-    line-height: 1.3;
+    font-size: clamp(1.5rem, 7.5vw, 1.85rem);
+    line-height: 1.15;
   }
 
   .heroTitleHighlight {
-    font-size: clamp(1.05rem, 6vw, 1.4rem);
+    font-size: clamp(1.3rem, 6.5vw, 1.6rem);
   }
 
   .heroSubtitle {
-    font-size: clamp(0.8rem, 3.5vw, 0.875rem);
-    margin-bottom: var(--space-5);
+    font-size: clamp(0.8125rem, 3.5vw, 0.9375rem);
     line-height: 1.65;
   }
 
   .trustBadges {
-    gap: var(--space-1-5);
-    flex-wrap: wrap;
+    max-width: 100%;
   }
 
   .trustBadge {
-    font-size: 0.7rem;
-    padding: var(--space-1-5) var(--space-2-5);
-    white-space: nowrap;
+    font-size: 0.72rem;
+    padding: 0.55rem 0.625rem;
   }
 
-  .heroCta {
-    gap: var(--space-2-5);
+  .ctaWrapper {
+    padding: 0 0.5rem;
   }
 
-  .btnPrimary,
-  .btnSecondary,
-  .phoneCta {
-    padding: var(--space-2) var(--space-4);
-    font-size: 0.85rem;
+  .bookingCta {
+    padding: 0.95rem 1.5rem;
   }
 }
 
-/* Mobile & Tablet - 481px to 768px */
-@media (min-width: 481px) and (max-width: 768px) {
-  .heroContent {
-    /* slightly larger offset for taller mobile/tablet nav + breathing room */
-    padding: calc(var(--navbar-height-mobile) + 2.5rem) var(--space-3) var(--space-5);
-  }
-
-  .heroTitle {
-    font-size: clamp(1.65rem, 5.5vw, 2rem);
-    margin-bottom: var(--space-5);
-  }
-}
-
-/* Tablet & Desktop Small - up to 768px */
+/* ================================
+   TABLET — up to 768px (shared)
+   ================================ */
 @media (max-width: 768px) {
-  .heroContent {
-    padding: calc(var(--navbar-height-mobile) + 2.5rem) var(--space-3) var(--space-5);
-  }
-
-  .heroTitle {
-    font-size: clamp(1.5rem, 5.5vw, 2rem);
-    margin-bottom: var(--space-5);
-  }
-
-  .heroTitleHighlight {
-    font-size: clamp(1.35rem, 5vw, 1.75rem);
-  }
-
-  .heroSubtitle {
-    font-size: clamp(0.8125rem, 2.5vw, 0.9375rem);
-    margin-bottom: var(--space-5);
-    line-height: 1.7;
-  }
-
-  .trustBadges {
-    gap: var(--space-2);
-  }
-
-  .trustBadge {
-    font-size: 0.75rem;
-    padding: var(--space-2) var(--space-3);
-  }
-
-  .trustBadge svg {
-    width: 16px;
-    height: 16px;
-  }
-
-  .urgencyBanner {
-    font-size: 0.75rem;
-    padding: var(--space-2) var(--space-3);
-  }
-
-  .heroCta {
-    flex-direction: column;
-    align-items: stretch;
-    gap: var(--space-3);
-  }
-
-  .btnPrimary,
-  .btnSecondary {
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
-    justify-content: center;
-    padding: var(--space-2-5) var(--space-5);
-    font-size: var(--text-sm);
-  }
-
-  .phoneCta {
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
-    justify-content: center;
-    padding: var(--space-2-5) var(--space-4);
-  }
-
-  .phoneCta svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  .phoneCta small {
-    font-size: var(--text-base);
-  }
-
   .scrollIndicator {
     bottom: var(--space-4);
   }
@@ -1546,22 +1493,6 @@
   .particle {
     width: 3px;
     height: 3px;
-  }
-
-  .particle:nth-child(1),
-  .particle:nth-child(6),
-  .particle:nth-child(8) {
-    width: 4px;
-    height: 4px;
-  }
-
-  .certifications {
-    gap: var(--space-1-5);
-  }
-
-  .certification {
-    font-size: 0.65rem;
-    padding: 0.25rem 0.5rem;
   }
 
   .countdown {
@@ -1602,8 +1533,30 @@
     height: 36px;
   }
 
-  .btnBadge {
-    font-size: 0.65rem;
+  .urgencyBanner {
+    font-size: 0.75rem;
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .heroCta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-3);
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .phoneCta {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    justify-content: center;
   }
 }
 

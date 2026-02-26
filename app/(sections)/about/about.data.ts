@@ -5,6 +5,7 @@ export const aboutData = {
   title: 'Esperienza e Innovazione al Servizio del Tuo Sorriso',
   description: `${config.studio.dottore} è un professionista specializzato in ${config.studio.specializzazione.toLowerCase()}, con anni di esperienza nel settore dentale. Il nostro studio utilizza le tecnologie più moderne per garantire trattamenti sicuri, efficaci e minimamente invasivi.`,
   image: config.images.doctor,
+  imageMobile: config.images.doctorMobile,
   stats: [
     {
       value: config.stats.anniEsperienza,

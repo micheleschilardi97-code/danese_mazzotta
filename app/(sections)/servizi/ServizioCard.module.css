@@ -10,6 +10,44 @@
   isolation: isolate;
 }
 
+@media (max-width: 767px) {
+  .card {
+    padding: var(--space-5) var(--space-4);
+    border-radius: var(--radius-md);
+  }
+
+  .cardIcon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: var(--space-3);
+  }
+
+  .cardIcon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .cardTitle {
+    font-size: clamp(1.05rem, 4vw, 1.25rem);
+    margin-bottom: 0.375rem;
+  }
+
+  .cardDescription {
+    font-size: clamp(0.8125rem, 3.2vw, 0.9375rem);
+    line-height: 1.6;
+    margin-bottom: var(--space-3);
+  }
+
+  .cardFeature {
+    font-size: 0.8125rem;
+  }
+
+  .cardLink {
+    margin-top: var(--space-3);
+    font-size: 0.8125rem;
+  }
+}
+
 /* Background Image */
 .cardBackground {
   position: absolute;

@@ -36,11 +36,16 @@ export default function About() {
         <div className={styles.aboutContent}>
           {/* Image */}
           <div className={`${styles.aboutImage} animate-in-left ${isVisible ? 'visible' : ''}`}>
-            <img
-              src={aboutData.image}
-              alt="Dott. Mario Giugno"
-              loading="lazy"
-            />
+            <picture>
+              {aboutData.imageMobile && (
+                <source media="(max-width: 767px)" srcSet={aboutData.imageMobile} />
+              )}
+              <img
+                src={aboutData.image}
+                alt="Dott. Mario Giugno"
+                loading="lazy"
+              />
+            </picture>
           </div>
 
           {/* Text Content */}

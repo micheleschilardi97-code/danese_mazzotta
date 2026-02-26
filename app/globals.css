@@ -37,7 +37,7 @@ h1 {
 }
 h2 { 
   font-size: var(--text-3xl); 
-  font-weight: 600;
+  font-weight: 700;
 }
 h3 { 
   font-size: var(--text-2xl);
@@ -46,6 +46,22 @@ h3 {
 h4 { font-size: var(--text-xl); }
 h5 { font-size: var(--text-lg); }
 h6 { font-size: var(--text-base); }
+
+/* Mobile heading refinements */
+@media (max-width: 767px) {
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+  }
+  
+  h2 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+  
+  h3 {
+    font-size: clamp(1.25rem, 5vw, 1.625rem);
+  }
+}
 
 a {
   color: var(--color-accent);
@@ -154,6 +170,12 @@ input, textarea, select {
   padding: 0 var(--space-4);
 }
 
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+
 @media (min-width: 768px) {
   .container {
     padding: 0 var(--space-6);
@@ -161,7 +183,13 @@ input, textarea, select {
 }
 
 .section {
-  padding: var(--space-12) 0;
+  padding: var(--space-10) 0;
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: var(--space-8) 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -189,6 +217,15 @@ input, textarea, select {
   border-radius: var(--radius-full);
   box-shadow: var(--shadow-glow);
   transition: all var(--duration-base) var(--ease-out);
+}
+
+@media (max-width: 767px) {
+  .btn-primary {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9375rem;
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .btn-primary:hover {

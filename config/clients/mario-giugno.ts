@@ -70,6 +70,7 @@ export interface ClientConfig {
     heroBg: string;
     heroMobile: string;
     doctor: string;
+    doctorMobile?: string;
   };
   branding: {
     primaryColor: string;
@@ -167,7 +168,8 @@ export const clientConfig: ClientConfig = {
     logo: "/images/logo-mario-giugno.png",
     heroBg: "/images/studio-dentistico-bg.jpg.png",
     heroMobile: "/images/dentista-mobile.png",
-    doctor: "/images/doctor-mario-giugno.jpg"
+    doctor: "/images/studio-dentistico-bg.jpg.png",
+    doctorMobile: "/images/dentista-mobile.png"
   },
 
   // Colori brand (opzionale - per personalizzazione colori)

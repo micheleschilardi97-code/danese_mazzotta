@@ -4,6 +4,12 @@
   gap: var(--space-4);
 }
 
+@media (max-width: 640px) {
+  .form {
+    gap: var(--space-3);
+  }
+}
+
 .formGroup {
   display: flex;
   flex-direction: column;
@@ -14,6 +20,12 @@
   font-size: var(--text-sm);
   font-weight: 600;
   color: var(--color-text-primary);
+}
+
+@media (max-width: 640px) {
+  .label {
+    font-size: 0.8125rem;
+  }
 }
 
 .input,
@@ -93,6 +105,15 @@
   transition: all var(--duration-base) var(--ease-out);
   cursor: pointer;
   border: none;
+}
+
+@media (max-width: 640px) {
+  .submitButton {
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9375rem;
+    min-height: 48px;
+  }
 }
 
 .submitButton:hover:not(:disabled) {
