@@ -4,7 +4,7 @@ Questa guida spiega come deployare lo stesso codebase per clienti diversi con co
 
 ---
 
-## 📋 Struttura Config
+## 📋 Struttura Configgg
 
 ```
 config/
