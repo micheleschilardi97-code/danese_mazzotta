@@ -84,7 +84,7 @@ export const clientConfig: ClientConfig = {
   studio: {
     nome: "Studio Dentistico Di Tanna Cairo",
     nomeBreve: "Studio Di Tanna Cairo",
-    dottore: "Dott. Di Tanna Fernando e Dott.ssa Cairo Maria Giovanna",
+    dottore: "Dott. Di Tanna e Dott.ssa Cairo",
     specializzazione: "Odontoiatria e Protesi Dentaria",
   },
 

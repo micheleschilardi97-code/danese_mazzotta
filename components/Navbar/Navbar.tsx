@@ -23,8 +23,8 @@ export default function Navbar() {
             {/* Logo with Badge */}
             <div className={styles.logoWrapper}>
               <Link href="/" className={styles.logo}>
-                <div className={styles.logoTitle}>{studioInfo.dottore}</div>
-                <div className={styles.logoSubtitle}>Studio Dentistico - Lecce</div>
+                <div className={styles.logoTitle}>{studioInfo.nome}</div>
+                <div className={styles.logoSubtitle}>Copertino (LE)</div>
               </Link>
               <span className={styles.badge} aria-label="Offerta prima visita gratuita">
                 Prima Visita Gratis
