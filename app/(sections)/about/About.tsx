@@ -8,7 +8,7 @@ import { animateValue } from '@/utils/animation.utils';
 import { aboutData } from './about.data';
 import styles from './About.module.css';
 
-export default function About() {
+export default function About({ hideImage = false }: { hideImage?: boolean }) {
   const sectionRef = useRef<HTMLElement>(null);
   const { isVisible } = useIntersectionObserver(sectionRef, { threshold: 0.2 });
   const [counters, setCounters] = useState(aboutData.stats.map(() => 0));
@@ -34,20 +34,21 @@ export default function About() {
   return (
     <section ref={sectionRef} id="about" className={`${styles.about} section`}>
       <div className="container">
-        <div className={styles.aboutContent}>
+        <div className={`${styles.aboutContent} ${hideImage ? styles.noImage : ''}`}>
           {/* Image */}
-          <div className={`${styles.aboutImage} animate-in-left ${isVisible ? 'visible' : ''}`}>
-            <Image
-              src={aboutData.image}
-              alt="Studio Dentistico Di Tanna Cairo"
-              width={600}
-              height={500}
-              sizes="(max-width: 767px) 100vw, 50vw"
-              loading="lazy"
-              quality={80}
-              style={{ width: '100%', height: 'auto', borderRadius: 'inherit' }}
-            />
-          </div>
+          {!hideImage && (
+            <div className={`${styles.aboutImage} animate-in-left ${isVisible ? 'visible' : ''}`}>
+              <Image
+                src={aboutData.image}
+                alt="Studio Dentistico Di Tanna Cairo"
+                fill
+                sizes="(max-width: 767px) 100vw, (max-width: 1023px) 100vw, 50vw"
+                loading="lazy"
+                quality={80}
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+              />
+            </div>
+          )}
 
           {/* Text Content */}
           <div className={styles.aboutText}>
