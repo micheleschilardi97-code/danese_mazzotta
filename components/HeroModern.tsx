@@ -208,11 +208,11 @@ export default function HeroModern({ onBookingClick }: HeroProps) {
             <div className="text-left">
               <p className="text-xs text-gray-400 uppercase tracking-wide">Chiamaci Ora</p>
               <a 
-                href="tel:0832199315"
+                href="tel:+393201539990"
                 className="text-xl font-bold text-white hover:text-emerald-400 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-[#0f172a] rounded"
-                aria-label="Chiama il numero 0832 199 315"
+                aria-label="Chiama il numero 320 153 9990"
               >
-                0832 199 315
+                320 153 9990
               </a>
               <p className="text-xs text-gray-400">Lun-Ven 8:00-20:00</p>
             </div>

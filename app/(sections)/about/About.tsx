@@ -40,7 +40,7 @@ export default function About({ hideImage = false }: { hideImage?: boolean }) {
             <div className={`${styles.aboutImage} animate-in-left ${isVisible ? 'visible' : ''}`}>
               <Image
                 src={aboutData.image}
-                alt="Studio Dentistico Di Tanna Cairo"
+                alt="Omnia Dentes Studio Dentistico"
                 fill
                 sizes="(max-width: 767px) 100vw, (max-width: 1023px) 100vw, 50vw"
                 loading="lazy"

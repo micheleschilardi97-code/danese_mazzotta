@@ -82,22 +82,22 @@ export interface ClientConfig {
 export const clientConfig: ClientConfig = {
   // Informazioni Studio
   studio: {
-    nome: "Studio Dentistico Di Tanna Cairo",
-    nomeBreve: "Studio Di Tanna Cairo",
-    dottore: "Dott. Di Tanna e Dott.ssa Cairo",
+    nome: "Omnia Dentes Studio Dentistico",
+    nomeBreve: "Omnia Dentes",
+    dottore: "Omnia Dentes",
     specializzazione: "Odontoiatria e Protesi Dentaria",
   },
 
   // Contatti
   contatti: {
-    telefono: "333 445 8620",
-    telefonoLink: "+393334458620",
-    email: "info@studioditannocairo.it",
-    whatsapp: "+393334458620",
-    indirizzo: "Via Oronzo Quarta 7, 73043 Copertino LE",
+    telefono: "320 153 9990",
+    telefonoLink: "+393201539990",
+    email: "info@omniadentes.it",
+    whatsapp: "+393201539990",
+    indirizzo: "Via Gen.C.A. Dalla Chiesa, 24, 73047 Monteroni di Lecce LE",
     coordinate: {
-      lat: 40.2697,
-      lng: 18.0497
+      lat: 40.3294,
+      lng: 18.1683
     }
   },
 
@@ -116,7 +116,7 @@ export const clientConfig: ClientConfig = {
   hero: {
     title: "Il Tuo Sorriso",
     titleHighlight: "è la Nostra Missione",
-    subtitle: "Professionalità, tecnologia d'avanguardia e cura dei dettagli a Copertino, nel cuore del Salento",
+    subtitle: "Professionalità, tecnologia d'avanguardia e cura dei dettagli a Monteroni di Lecce, nel cuore del Salento",
     ctaPrimary: {
       text: "Prenota Visita",
       href: "/prenota-visita",
@@ -124,7 +124,7 @@ export const clientConfig: ClientConfig = {
     },
     ctaSecondary: {
       text: "Chiama Ora",
-      href: "tel:+393334458620"
+      href: "tel:+393201539990"
     },
     trustBadges: [
       { text: "Massima Professionalità", icon: "shield" },
@@ -149,11 +149,11 @@ export const clientConfig: ClientConfig = {
 
   // SEO & Social
   seo: {
-    siteName: "Studio Dentistico Di Tanna Cairo",
-    siteUrl: "https://studioditannocairo.it",
-    description: "Studio dentistico a Copertino (Lecce) specializzato in parodontologia, ortodonzia invisibile, implantologia e laser terapia. Prenota online.",
-    keywords: "dentista copertino, studio dentistico copertino lecce, parodontologia lecce, ortodonzia invisibile lecce, implantologia copertino",
-    ogImage: "/images/og-ditanna-cairo.jpg"
+    siteName: "Omnia Dentes Studio Dentistico",
+    siteUrl: "https://omniadentes.it",
+    description: "Omnia Dentes Studio Dentistico a Monteroni di Lecce. Specializzati in parodontologia, ortodonzia invisibile, implantologia e laser terapia. Prenota online.",
+    keywords: "dentista monteroni di lecce, studio dentistico monteroni lecce, parodontologia lecce, ortodonzia invisibile lecce, implantologia monteroni",
+    ogImage: "/images/og-omnia-dentes.jpg"
   },
 
   social: {
@@ -165,7 +165,7 @@ export const clientConfig: ClientConfig = {
 
   // Immagini specifiche
   images: {
-    logo: "/images/logo-ditanna-cairo.png",
+    logo: "/images/logo-omnia-dentes.png",
     heroBg: "/images/studio_2.png",
     heroMobile: "/images/studio_2.png",
     doctor: "/images/studio_2.png",

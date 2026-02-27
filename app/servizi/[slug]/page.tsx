@@ -25,21 +25,21 @@ export async function generateMetadata({ params }: ServizioPageProps): Promise<M
   }
 
   return {
-    title: `${servizio.title} Copertino Lecce`,
-    description: `${servizio.description} Presso lo studio ${config.studio.dottore} a Copertino (Lecce). Prima visita gratuita.`,
+    title: `${servizio.title} Monteroni di Lecce`,
+    description: `${servizio.description} Presso lo studio ${config.studio.dottore} a Monteroni di Lecce. Prima visita gratuita.`,
     keywords: [
-      `${servizio.title.toLowerCase()} copertino`,
-      `${slug} copertino lecce`,
-      'dentista copertino',
-      `${slug} studio dentistico copertino`,
+      `${servizio.title.toLowerCase()} monteroni di lecce`,
+      `${slug} monteroni lecce`,
+      'dentista monteroni di lecce',
+      `${slug} studio dentistico monteroni`,
       config.studio.dottore.toLowerCase(),
     ],
     alternates: {
       canonical: `${config.seo.siteUrl}/servizi/${slug}`,
     },
     openGraph: {
-      title: `${servizio.title} | ${config.studio.nomeBreve} Copertino`,
-      description: `${servizio.description} Studio dentistico ${config.studio.dottore} a Copertino (Lecce).`,
+      title: `${servizio.title} | ${config.studio.nomeBreve} Monteroni di Lecce`,
+      description: `${servizio.description} Studio dentistico ${config.studio.dottore} a Monteroni di Lecce.`,
       type: 'website',
       locale: 'it_IT',
       siteName: config.seo.siteName,
@@ -69,9 +69,9 @@ export default async function ServizioPage({ params }: ServizioPageProps) {
       "name": config.studio.nome,
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Copertino",
+        "addressLocality": "Monteroni di Lecce",
         "addressRegion": "Puglia",
-        "postalCode": "73043",
+        "postalCode": "73047",
         "addressCountry": "IT"
       }
     }

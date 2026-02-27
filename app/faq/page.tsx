@@ -4,10 +4,10 @@ import FAQ from '../(sections)/faq/FAQ';
 
 export const metadata: Metadata = {
   title: 'FAQ - Domande Frequenti',
-  description: `Risposte alle domande più frequenti su parodontologia, ortodonzia, impianti dentali e trattamenti dentali a Copertino (Lecce). Scopri tutto sui nostri servizi presso lo studio ${config.studio.dottore}.`,
+  description: `Risposte alle domande più frequenti su parodontologia, ortodonzia, impianti dentali e trattamenti dentali a Monteroni di Lecce. Scopri tutto sui nostri servizi presso lo studio ${config.studio.dottore}.`,
   keywords: [
-    'domande frequenti dentista copertino',
-    'faq studio dentistico copertino lecce',
+    'domande frequenti dentista monteroni di lecce',
+    'faq studio dentistico monteroni lecce',
     'impianti dentali domande',
     'parodontologia domande',
     'ortodonzia invisibile faq',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: config.seo.siteName,
     url: `${config.seo.siteUrl}/faq`,
     title: `FAQ — Domande Frequenti | ${config.studio.nomeBreve}`,
-    description: 'Risposte alle domande più frequenti su implantologia dentale, chirurgia orale e trattamenti a Lecce.',
+    description: 'Risposte alle domande più frequenti su implantologia dentale, chirurgia orale e trattamenti a Monteroni di Lecce.',
     images: [{ url: `${config.seo.siteUrl}${config.seo.ogImage}`, width: 1200, height: 630 }],
   },
 };

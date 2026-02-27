@@ -18,7 +18,7 @@ export const faqData: FAQItem[] = [
   {
     id: '3',
     question: 'Cos\'è l\'ortodonzia invisibile All-in?',
-    answer: 'All-in è il primo sistema italiano di ortodonzia invisibile mediante mascherine trasparenti. Permette di riallineare i denti in modo discreto, senza l\'utilizzo di apparecchi metallici visibili. La Dott.ssa Cairo è certificata All-in.'
+    answer: 'All-in è il primo sistema italiano di ortodonzia invisibile mediante mascherine trasparenti. Permette di riallineare i denti in modo discreto, senza l\'utilizzo di apparecchi metallici visibili. Il nostro studio è certificato All-in.'
   },
   {
     id: '4',
@@ -43,7 +43,7 @@ export const faqData: FAQItem[] = [
   {
     id: '8',
     question: 'Come posso prenotare una visita?',
-    answer: 'Puoi prenotare online direttamente dal nostro sito, chiamare al 333 445 8620, oppure compilare il modulo di contatto. Ti ricontatteremo al più presto per fissare l\'appuntamento.'
+    answer: 'Puoi prenotare online direttamente dal nostro sito, chiamare al 320 153 9990, oppure compilare il modulo di contatto. Ti ricontatteremo al più presto per fissare l\'appuntamento.'
   }
 ];
 

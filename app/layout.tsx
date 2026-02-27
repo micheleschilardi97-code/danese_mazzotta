@@ -29,11 +29,11 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    template: `%s | ${config.studio.nome} — Copertino (Lecce)`,
-    default: `Dentista Copertino | ${config.studio.specializzazione} | Prenota Online — ${config.studio.nomeBreve}`
+    template: `%s | ${config.studio.nome} — Monteroni di Lecce`,
+    default: `Dentista Monteroni di Lecce | ${config.studio.specializzazione} | Prenota Online — ${config.studio.nomeBreve}`
   },
-  description: `${config.studio.specializzazione} a Copertino (Lecce). ${config.stats.anniEsperienza}+ anni esperienza, ${config.stats.pazientiSoddisfatti}+ pazienti soddisfatti. Prenota online. ☎️ ${config.contatti.telefono} — ${config.contatti.indirizzo}`,
-  keywords: ['dentista copertino', 'studio dentistico copertino lecce', 'parodontologia lecce', config.studio.dottore.toLowerCase(), 'ortodonzia invisibile lecce'],
+  description: `${config.studio.specializzazione} a Monteroni di Lecce. ${config.stats.anniEsperienza}+ anni esperienza, ${config.stats.pazientiSoddisfatti}+ pazienti soddisfatti. Prenota online. ☎️ ${config.contatti.telefono} — ${config.contatti.indirizzo}`,
+  keywords: ['dentista monteroni di lecce', 'studio dentistico monteroni lecce', 'parodontologia lecce', config.studio.dottore.toLowerCase(), 'ortodonzia invisibile lecce'],
   authors: [{ name: config.studio.dottore }],
   creator: config.studio.nome,
   publisher: config.studio.nome,
@@ -56,13 +56,13 @@ export const metadata: Metadata = {
     locale: 'it_IT',
     siteName: config.seo.siteName,
     url: config.seo.siteUrl,
-    title: `Dentista Copertino | ${config.studio.specializzazione} | ${config.studio.nomeBreve}`,
-    description: `${config.studio.specializzazione} a Copertino (Lecce). Prenota online. ${config.stats.anniEsperienza}+ anni esperienza. ☎️ ${config.contatti.telefono}`,
+    title: `Dentista Monteroni di Lecce | ${config.studio.specializzazione} | ${config.studio.nomeBreve}`,
+    description: `${config.studio.specializzazione} a Monteroni di Lecce. Prenota online. ${config.stats.anniEsperienza}+ anni esperienza. ☎️ ${config.contatti.telefono}`,
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Dentista Copertino | ${config.studio.specializzazione} | ${config.studio.nomeBreve}`,
-    description: `${config.studio.specializzazione} a Copertino (Lecce). Prenota online. ☎️ ${config.contatti.telefono}`,
+    title: `Dentista Monteroni di Lecce | ${config.studio.specializzazione} | ${config.studio.nomeBreve}`,
+    description: `${config.studio.specializzazione} a Monteroni di Lecce. Prenota online. ☎️ ${config.contatti.telefono}`,
   },
   icons: {
     icon: '/icons/favicon.ico',
@@ -84,9 +84,9 @@ const structuredData = {
   "address": {
     "@type": "PostalAddress",
     "streetAddress": config.contatti.indirizzo.split(',')[0],
-    "addressLocality": "Copertino",
+    "addressLocality": "Monteroni di Lecce",
     "addressRegion": "Puglia",
-    "postalCode": "73043",
+    "postalCode": "73047",
     "addressCountry": "IT"
   },
   "geo": {

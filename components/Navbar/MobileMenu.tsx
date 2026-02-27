@@ -63,7 +63,7 @@ export default function MobileMenu({
         <div className={styles.menuHeader}>
           <div className={styles.menuLogo}>
             <div className={styles.logoTitle}>{studioInfo.dottore}</div>
-            <div className={styles.logoSubtitle}>Studio Dentistico - Lecce</div>
+            <div className={styles.logoSubtitle}>Studio Dentistico - Monteroni di Lecce</div>
           </div>
           <button
             className={styles.closeButton}

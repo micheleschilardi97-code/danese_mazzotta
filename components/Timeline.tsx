@@ -15,7 +15,7 @@ const timelineData: TimelineEvent[] = [
   {
     year: '2009',
     title: 'Inizio attività',
-    description: 'Apertura dello Studio Dentistico a Lecce con focus su eccellenza e innovazione'
+    description: 'Apertura dello Studio Dentistico a Monteroni di Lecce con focus su eccellenza e innovazione'
   },
   {
     year: '2012',

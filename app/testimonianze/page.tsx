@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: 'Testimonianze e Recensioni',
   description: `Leggi le recensioni e le esperienze dei pazienti dello studio ${config.studio.dottore} a Lecce. ${config.stats.pazientiSoddisfatti}+ pazienti soddisfatti, valutazione ${config.stats.recensioni5Stelle}/5.`,
   keywords: [
-    'recensioni dentista copertino',
-    'testimonianze dentista copertino lecce',
-    'opinioni studio dentistico copertino',
+    'recensioni dentista monteroni di lecce',
+    'testimonianze dentista monteroni lecce',
+    'opinioni studio dentistico monteroni',
     'pazienti soddisfatti dentista lecce',
-    'recensioni studio di tanna cairo',
-    'studio dentistico di tanna cairo recensioni',
+    'recensioni omnia dentes',
+    'omnia dentes studio dentistico recensioni',
   ],
   alternates: {
     canonical: `${config.seo.siteUrl}/testimonianze`,
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: config.seo.siteName,
     url: `${config.seo.siteUrl}/testimonianze`,
     title: `Testimonianze | ${config.studio.nomeBreve}`,
-    description: `${config.stats.pazientiSoddisfatti}+ pazienti soddisfatti. Leggi le recensioni dei pazienti dello studio dentistico a Lecce.`,
+    description: `${config.stats.pazientiSoddisfatti}+ pazienti soddisfatti. Leggi le recensioni dei pazienti dello studio dentistico a Monteroni di Lecce.`,
     images: [{ url: `${config.seo.siteUrl}${config.seo.ogImage}`, width: 1200, height: 630 }],
   },
 };

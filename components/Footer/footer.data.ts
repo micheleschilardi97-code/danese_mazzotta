@@ -4,7 +4,7 @@ export const footerData = {
   studio: {
     name: config.studio.nome,
     dottore: config.studio.dottore,
-    description: `Odontoiatria e protesi dentaria a Copertino, nel cuore del Salento.`
+    description: `Odontoiatria e protesi dentaria a Monteroni di Lecce, nel cuore del Salento.`
   },
   links: {
     servizi: [

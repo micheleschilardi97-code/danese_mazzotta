@@ -129,7 +129,7 @@ export const prefersReducedMotion = (): boolean => {
  * Format phone number for display
  */
 export const formatPhoneNumber = (phone: string): string => {
-  // Format: 0832 199 3151
+  // Format: 320 153 9990
   const cleaned = phone.replace(/\D/g, '');
   const match = cleaned.match(/^(\d{4})(\d{3})(\d{4})$/);
   
@@ -184,7 +184,7 @@ export const generateHeroStructuredData = (data: any) => {
   return {
     '@context': 'https://schema.org',
     '@type': 'MedicalBusiness',
-    'name': 'Studio Dentistico Di Tanna Cairo',
+    'name': 'Omnia Dentes Studio Dentistico',
     'description': data.subtitle,
     'telephone': data.phoneNumber,
     'priceRange': '$$',
