@@ -4,7 +4,7 @@
 
 Hai ora un sistema multi-cliente con:
 - ✅ Config centralizzato per cliente
-- ✅ 2 clienti già configurati (Mario Giugno + Nuzzoli Zacchino)
+- ✅ 2 clienti già configurati (Danese-Mazzotta + Nuzzoli Zacchino)
 - ✅ Sistema di switching tramite env variable
 - ✅ Deploy guide per Vercel
 
@@ -12,9 +12,9 @@ Hai ora un sistema multi-cliente con:
 
 ## 🚀 Test Rapido
 
-### 1. Testa Cliente 1 (Mario Giugno)
+### 1. Testa Cliente 1 (Danese-Mazzotta)
 ```bash
-echo "NEXT_PUBLIC_CLIENT_ID=mario-giugno" > .env.local
+echo "NEXT_PUBLIC_CLIENT_ID=danese-mazzotta" > .env.local
 npm run dev
 ```
 Apri http://localhost:3000
@@ -31,7 +31,7 @@ Ricarica la pagina
 ## 📁 File Modificati
 
 ### Nuovi file creati:
-- `config/clients/mario-giugno.ts` - Config Dr. Giugno
+- `config/clients/danese-mazzotta.ts` - Config Danese-Mazzotta
 - `config/clients/nuzzoli-zacchino.ts` - Config Dr. Nuzzoli
 - `config/index.ts` - Manager centrale
 - `.env.example` - Template variabili
@@ -48,7 +48,7 @@ Ricarica la pagina
 
 ### 1. Crea config cliente
 ```bash
-cp config/clients/mario-giugno.ts config/clients/nuovo-cliente.ts
+cp config/clients/danese-mazzotta.ts config/clients/nuovo-cliente.ts
 ```
 
 ### 2. Modifica i dati in `nuovo-cliente.ts`
@@ -58,7 +58,7 @@ cp config/clients/mario-giugno.ts config/clients/nuovo-cliente.ts
 import { clientConfig as nuovoClienteConfig } from './clients/nuovo-cliente';
 
 const clients = {
-  'mario-giugno': marioGiugnoConfig,
+  'danese-mazzotta': daneseMazzottaConfig,
   'nuzzoli-zacchino': nuzzoliZacchinoConfig,
   'nuovo-cliente': nuovoClienteConfig, // ← Aggiungi
 }
@@ -78,12 +78,12 @@ npm run dev
 
 1. **Deploy su Vercel**
    - Importa da GitHub
-   - Aggiungi env variable: `NEXT_PUBLIC_CLIENT_ID=mario-giugno`
+   - Aggiungi env variable: `NEXT_PUBLIC_CLIENT_ID=danese-mazzotta`
    - Deploy
 
 2. **Dominio Custom**
    - Settings → Domains
-   - Aggiungi: `studiomariogiugno.it`
+   - Aggiungi: `danesemazzotta.it`
    - Configura DNS
 
 3. **Duplicate per altri clienti**

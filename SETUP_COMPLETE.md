@@ -46,9 +46,9 @@
 
 ## 🚀 Test Subito!
 
-### Testa Cliente 1 (Mario Giugno):
+### Testa Cliente 1 (Danese-Mazzotta):
 ```bash
-echo "NEXT_PUBLIC_CLIENT_ID=mario-giugno" > .env.local
+echo "NEXT_PUBLIC_CLIENT_ID=danese-mazzotta" > .env.local
 npm run dev
 ```
 
@@ -64,8 +64,8 @@ Visita http://localhost:3000 e verifica che tutti i dati cambino!
 
 ## 📊 Cosa Cambia Automaticamente:
 
-### Per Mario Giugno:
-- Telefono: **0832 199 3151**
+### Per Danese-Mazzotta:
+- Telefono: **371 585 5834**
 - Orari: Lun-Ven 9-19, Sab 9-13
 - Esperienza: **20 anni**
 - Pazienti: **2000+**
@@ -89,13 +89,13 @@ Visita http://localhost:3000 e verifica che tutti i dati cambino!
    git push origin main
    ```
 
-2. **Deploy Cliente 1 (Mario Giugno)**
+2. **Deploy Cliente 1 (Danese-Mazzotta)**
    - Vai su vercel.com
    - Import repository
    - Environment Variables:
-     - `NEXT_PUBLIC_CLIENT_ID` = `mario-giugno`
+     - `NEXT_PUBLIC_CLIENT_ID` = `danese-mazzotta`
    - Deploy
-   - Add domain: `studiomariogiugno.it`
+   - Add domain: `danesemazzotta.it`
 
 3. **Deploy Cliente 2 (Nuzzoli Zacchino)**
    - Nel dashboard Vercel del progetto
@@ -168,7 +168,7 @@ Prima di ogni deploy verifica:
 
 2. **Immagini Specifiche**
    - Usa `config.images` per path custom
-   - Organizza in cartelle: `/images/mario-giugno/`
+   - Organizza in cartelle: `/images/danese-mazzotta/`
 
 3. **SEO Automatico**
    - Tutto il SEO si aggiorna automaticamente

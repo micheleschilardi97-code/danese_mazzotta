@@ -208,13 +208,13 @@ export default function HeroModern({ onBookingClick }: HeroProps) {
             <div className="text-left">
               <p className="text-xs text-gray-400 uppercase tracking-wide">Chiamaci Ora</p>
               <a 
-                href="tel:+393201539990"
+                href="tel:+393715855834"
                 className="text-xl font-bold text-white hover:text-emerald-400 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-[#0f172a] rounded"
-                aria-label="Chiama il numero 320 153 9990"
+                aria-label="Chiama il numero 371 585 5834"
               >
-                320 153 9990
+                371 585 5834
               </a>
-              <p className="text-xs text-gray-400">Lun-Ven 8:00-20:00</p>
+              <p className="text-xs text-gray-400">Lun-Ven 9:00-20:00</p>
             </div>
           </motion.div>
 
@@ -225,7 +225,7 @@ export default function HeroModern({ onBookingClick }: HeroProps) {
           >
             <p className="text-sm text-gray-400 mb-4">Certificati e Partner Ufficiali</p>
             <div className="flex flex-wrap justify-center gap-6 items-center opacity-60">
-              <span className="text-xs font-medium text-gray-500">SIO • OMC Lecce • EADI • ISO 9001</span>
+              <span className="text-xs font-medium text-gray-500">SIO • OMC Lecce • EADI</span>
             </div>
           </motion.div>
         </motion.div>

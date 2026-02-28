@@ -2,7 +2,7 @@
 
 Questo file è un placeholder. Sostituire con le immagini reali:
 
-- **doctor.jpg** - Foto professionale del Dott. Mario Giugno (consigliato: 800x600px)
+- **doctor.jpg** - Foto professionale Danese-Mazzotta (consigliato: 800x600px)
 - **og-image.jpg** - Immagine per social media sharing (1200x630px)
 - **studio.jpg** - Foto dello studio dentistico (800x600px)
 - **avatar-1.jpg** to **avatar-5.jpg** - Avatar pazienti per testimonianze (200x200px ciascuno)

@@ -4,14 +4,14 @@ import { config } from '@/config';
 
 export const metadata: Metadata = {
   title: 'Contatti',
-  description: `Contatta lo ${config.studio.nome} a Monteroni di Lecce. Prenota la tua visita o richiedi informazioni. ☎️ ${config.contatti.telefono} — ${config.contatti.indirizzo}`,
+  description: `Contatta lo ${config.studio.nome} a Lecce. Prenota la tua visita o richiedi informazioni. ☎️ ${config.contatti.telefono} — ${config.contatti.indirizzo}`,
   keywords: [
-    'contatti dentista monteroni di lecce',
-    'studio dentistico monteroni contatti',
-    'telefono dentista monteroni lecce',
-    'indirizzo dentista monteroni di lecce',
-    'prenotazione dentista monteroni',
-    'dentista via dalla chiesa monteroni',
+    'contatti dentista lecce',
+    'studio dentistico lecce contatti',
+    'telefono dentista lecce',
+    'indirizzo dentista lecce',
+    'prenotazione dentista lecce',
+    'dentista via lupiae lecce',
   ],
   alternates: {
     canonical: `${config.seo.siteUrl}/contatti`,
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: config.seo.siteName,
     url: `${config.seo.siteUrl}/contatti`,
     title: `Contatti | ${config.studio.nomeBreve}`,
-    description: `Contatta lo studio dentistico ${config.studio.dottore} a Monteroni di Lecce. ☎️ ${config.contatti.telefono}`,
+    description: `Contatta lo studio dentistico ${config.studio.dottore} a Lecce. ☎️ ${config.contatti.telefono}`,
     images: [{ url: `${config.seo.siteUrl}${config.seo.ogImage}`, width: 1200, height: 630 }],
   },
 };

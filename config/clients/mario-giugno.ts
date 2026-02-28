@@ -82,22 +82,22 @@ export interface ClientConfig {
 export const clientConfig: ClientConfig = {
   // Informazioni Studio
   studio: {
-    nome: "Omnia Dentes Studio Dentistico",
-    nomeBreve: "Omnia Dentes",
-    dottore: "Omnia Dentes",
+    nome: "Studio Dentistico Danese-Mazzotta",
+    nomeBreve: "Danese-Mazzotta",
+    dottore: "Danese-Mazzotta",
     specializzazione: "Odontoiatria e Protesi Dentaria",
   },
 
   // Contatti
   contatti: {
-    telefono: "320 153 9990",
-    telefonoLink: "+393201539990",
-    email: "info@omniadentes.it",
-    whatsapp: "+393201539990",
-    indirizzo: "Via Gen.C.A. Dalla Chiesa, 24, 73047 Monteroni di Lecce LE",
+    telefono: "371 585 5834",
+    telefonoLink: "+393715855834",
+    email: "info@danesemazzotta.it",
+    whatsapp: "+393715855834",
+    indirizzo: "Via Lupiae, 5, 73100 Lecce LE",
     coordinate: {
-      lat: 40.3294,
-      lng: 18.1683
+      lat: 40.3516,
+      lng: 18.1718
     }
   },
 
@@ -108,7 +108,7 @@ export const clientConfig: ClientConfig = {
     mercoledi: { aperto: true, mattina: "09:00-13:00", pomeriggio: "15:00-20:00" },
     giovedi: { aperto: true, mattina: "09:00-13:00", pomeriggio: "15:00-20:00" },
     venerdi: { aperto: true, mattina: "09:00-13:00", pomeriggio: "15:00-20:00" },
-    sabato: { aperto: true, mattina: "09:00-13:00", pomeriggio: null },
+    sabato: { aperto: false, mattina: null, pomeriggio: null },
     domenica: { aperto: false, mattina: null, pomeriggio: null }
   },
 
@@ -116,7 +116,7 @@ export const clientConfig: ClientConfig = {
   hero: {
     title: "Il Tuo Sorriso",
     titleHighlight: "è la Nostra Missione",
-    subtitle: "Professionalità, tecnologia d'avanguardia e cura dei dettagli a Monteroni di Lecce, nel cuore del Salento",
+    subtitle: "Professionalità, tecnologia d'avanguardia e cura dei dettagli a Lecce, nel cuore del Salento",
     ctaPrimary: {
       text: "Prenota Visita",
       href: "/prenota-visita",
@@ -124,7 +124,7 @@ export const clientConfig: ClientConfig = {
     },
     ctaSecondary: {
       text: "Chiama Ora",
-      href: "tel:+393201539990"
+      href: "tel:+393715855834"
     },
     trustBadges: [
       { text: "Massima Professionalità", icon: "shield" },
@@ -149,11 +149,11 @@ export const clientConfig: ClientConfig = {
 
   // SEO & Social
   seo: {
-    siteName: "Omnia Dentes Studio Dentistico",
-    siteUrl: "https://omniadentes.it",
-    description: "Omnia Dentes Studio Dentistico a Monteroni di Lecce. Specializzati in parodontologia, ortodonzia invisibile, implantologia e laser terapia. Prenota online.",
-    keywords: "dentista monteroni di lecce, studio dentistico monteroni lecce, parodontologia lecce, ortodonzia invisibile lecce, implantologia monteroni",
-    ogImage: "/images/og-omnia-dentes.jpg"
+    siteName: "Studio Dentistico Danese-Mazzotta",
+    siteUrl: "https://danesemazzotta.it",
+    description: "Studio Dentistico Danese-Mazzotta a Lecce. Specializzati in parodontologia, ortodonzia invisibile, implantologia e laser terapia. Prenota online.",
+    keywords: "dentista lecce, studio dentistico lecce, parodontologia lecce, ortodonzia invisibile lecce, implantologia lecce, danese mazzotta",
+    ogImage: "/images/og-danese-mazzotta.jpg"
   },
 
   social: {
@@ -165,7 +165,7 @@ export const clientConfig: ClientConfig = {
 
   // Immagini specifiche
   images: {
-    logo: "/images/logo-omnia-dentes.png",
+    logo: "/images/logo-danese-mazzotta.png",
     heroBg: "/images/studio-dentistico-bg.jpg.png",
     heroMobile: "/images/dentista-mobile.png",
     doctor: "/images/studio-dentistico-bg.jpg.png",

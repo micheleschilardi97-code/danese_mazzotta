@@ -24,7 +24,7 @@ export default function Navbar() {
             <div className={styles.logoWrapper}>
               <Link href="/" className={styles.logo}>
                 <div className={styles.logoTitle}>{studioInfo.nome}</div>
-                <div className={styles.logoSubtitle}>Monteroni di Lecce (LE)</div>
+                <div className={styles.logoSubtitle}>Lecce (LE)</div>
               </Link>
               <span className={styles.badge} aria-label="Offerta prima visita gratuita">
                 Prima Visita Gratis

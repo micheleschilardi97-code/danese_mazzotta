@@ -66,10 +66,10 @@ export const heroData = {
     displayDuration: 5000, // 5 seconds
     initialDelay: 3000, // First after 3s
     recentPatients: [
-      { name: "Maria R.", city: "Monteroni", service: "Parodontologia", rating: 5, timeAgo: "2 ore fa" },
+      { name: "Maria R.", city: "Lecce", service: "Parodontologia", rating: 5, timeAgo: "2 ore fa" },
       { name: "Giuseppe T.", city: "Leverano", service: "Impianto dentale", rating: 5, timeAgo: "5 ore fa" },
       { name: "Anna M.", city: "Nardò", service: "Sbiancamento", rating: 5, timeAgo: "1 giorno fa" },
-      { name: "Marco L.", city: "Monteroni", service: "Ortodonzia invisibile", rating: 5, timeAgo: "3 ore fa" }
+      { name: "Marco L.", city: "Lecce", service: "Ortodonzia invisibile", rating: 5, timeAgo: "3 ore fa" }
     ]
   },
   
@@ -91,9 +91,9 @@ export const heroData = {
   // SEO & SCHEMA.ORG DATA
   // ═══════════════════════════════════════════════════════════════
   seo: {
-    title: "Dentista Monteroni di Lecce | Omnia Dentes Studio Dentistico | Prenota Online",
-    description: "Omnia Dentes Studio Dentistico a Monteroni di Lecce (LE). Parodontologia, ortodonzia invisibile, implantologia, laser terapia. Prenota online.",
-    keywords: ["dentista monteroni di lecce", "studio dentistico monteroni lecce", "parodontologia lecce", "ortodonzia invisibile lecce"]
+    title: "Dentista Lecce | Studio Dentistico Danese-Mazzotta | Prenota Online",
+    description: "Studio Dentistico Danese-Mazzotta a Lecce (LE). Parodontologia, ortodonzia invisibile, implantologia, laser terapia. Prenota online.",
+    keywords: ["dentista lecce", "studio dentistico lecce", "parodontologia lecce", "ortodonzia invisibile lecce"]
   },
   
   // ═══════════════════════════════════════════════════════════════

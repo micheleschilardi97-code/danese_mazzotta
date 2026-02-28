@@ -29,11 +29,11 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    template: `%s | ${config.studio.nome} — Monteroni di Lecce`,
-    default: `Dentista Monteroni di Lecce | ${config.studio.specializzazione} | Prenota Online — ${config.studio.nomeBreve}`
+    template: `%s | ${config.studio.nome} — Lecce`,
+    default: `Dentista Lecce | ${config.studio.specializzazione} | Prenota Online — ${config.studio.nomeBreve}`
   },
-  description: `${config.studio.specializzazione} a Monteroni di Lecce. ${config.stats.anniEsperienza}+ anni esperienza, ${config.stats.pazientiSoddisfatti}+ pazienti soddisfatti. Prenota online. ☎️ ${config.contatti.telefono} — ${config.contatti.indirizzo}`,
-  keywords: ['dentista monteroni di lecce', 'studio dentistico monteroni lecce', 'parodontologia lecce', config.studio.dottore.toLowerCase(), 'ortodonzia invisibile lecce'],
+  description: `${config.studio.specializzazione} a Lecce. ${config.stats.anniEsperienza}+ anni esperienza, ${config.stats.pazientiSoddisfatti}+ pazienti soddisfatti. Prenota online. ☎️ ${config.contatti.telefono} — ${config.contatti.indirizzo}`,
+  keywords: ['dentista lecce', 'studio dentistico lecce', 'parodontologia lecce', config.studio.dottore.toLowerCase(), 'ortodonzia invisibile lecce'],
   authors: [{ name: config.studio.dottore }],
   creator: config.studio.nome,
   publisher: config.studio.nome,
@@ -56,13 +56,13 @@ export const metadata: Metadata = {
     locale: 'it_IT',
     siteName: config.seo.siteName,
     url: config.seo.siteUrl,
-    title: `Dentista Monteroni di Lecce | ${config.studio.specializzazione} | ${config.studio.nomeBreve}`,
-    description: `${config.studio.specializzazione} a Monteroni di Lecce. Prenota online. ${config.stats.anniEsperienza}+ anni esperienza. ☎️ ${config.contatti.telefono}`,
+    title: `Dentista Lecce | ${config.studio.specializzazione} | ${config.studio.nomeBreve}`,
+    description: `${config.studio.specializzazione} a Lecce. Prenota online. ${config.stats.anniEsperienza}+ anni esperienza. ☎️ ${config.contatti.telefono}`,
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Dentista Monteroni di Lecce | ${config.studio.specializzazione} | ${config.studio.nomeBreve}`,
-    description: `${config.studio.specializzazione} a Monteroni di Lecce. Prenota online. ☎️ ${config.contatti.telefono}`,
+    title: `Dentista Lecce | ${config.studio.specializzazione} | ${config.studio.nomeBreve}`,
+    description: `${config.studio.specializzazione} a Lecce. Prenota online. ☎️ ${config.contatti.telefono}`,
   },
   icons: {
     icon: '/icons/favicon.ico',
@@ -84,9 +84,9 @@ const structuredData = {
   "address": {
     "@type": "PostalAddress",
     "streetAddress": config.contatti.indirizzo.split(',')[0],
-    "addressLocality": "Monteroni di Lecce",
+    "addressLocality": "Lecce",
     "addressRegion": "Puglia",
-    "postalCode": "73047",
+    "postalCode": "73100",
     "addressCountry": "IT"
   },
   "geo": {
@@ -104,21 +104,15 @@ const structuredData = {
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday"],
-      "opens": "17:30",
-      "closes": "20:30"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Wednesday"],
-      "opens": "17:30",
-      "closes": "20:30"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Friday"],
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       "opens": "09:00",
       "closes": "13:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "15:00",
+      "closes": "20:00"
     }
   ],
   "medicalSpecialty": ["Parodontologia", "Ortodonzia", "Implantologia Dentale", "Endodonzia", "Laser Terapia"],

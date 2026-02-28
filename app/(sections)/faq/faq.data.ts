@@ -43,7 +43,7 @@ export const faqData: FAQItem[] = [
   {
     id: '8',
     question: 'Come posso prenotare una visita?',
-    answer: 'Puoi prenotare online direttamente dal nostro sito, chiamare al 320 153 9990, oppure compilare il modulo di contatto. Ti ricontatteremo al più presto per fissare l\'appuntamento.'
+    answer: 'Puoi prenotare online direttamente dal nostro sito, chiamare al 371 585 5834, oppure compilare il modulo di contatto. Ti ricontatteremo al più presto per fissare l\'appuntamento.'
   }
 ];
 

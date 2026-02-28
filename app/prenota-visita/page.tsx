@@ -4,12 +4,12 @@ import PrenotaVisitaClient from './PrenotaVisitaClient';
 
 export const metadata: Metadata = {
   title: 'Prenota Visita Gratuita',
-  description: `Prenota la tua visita presso lo ${config.studio.nome} a Monteroni di Lecce. Scegli data e orario online. ☎️ ${config.contatti.telefono}`,
+  description: `Prenota la tua visita presso lo ${config.studio.nome} a Lecce. Scegli data e orario online. ☎️ ${config.contatti.telefono}`,
   keywords: [
-    'prenota visita dentista monteroni di lecce',
-    'prenotazione dentista monteroni lecce',
-    'appuntamento dentista monteroni',
-    'visita odontoiatrica monteroni lecce',
+    'prenota visita dentista lecce',
+    'prenotazione dentista lecce',
+    'appuntamento dentista lecce',
+    'visita odontoiatrica lecce',
     'prenotazione online dentista lecce',
   ],
   alternates: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: config.seo.siteName,
     url: `${config.seo.siteUrl}/prenota-visita`,
     title: `Prenota Visita Gratuita | ${config.studio.nomeBreve}`,
-    description: `Prenota online la tua visita presso lo studio dentistico ${config.studio.dottore} a Monteroni di Lecce. ☎️ ${config.contatti.telefono}`,
+    description: `Prenota online la tua visita presso lo studio dentistico ${config.studio.dottore} a Lecce. ☎️ ${config.contatti.telefono}`,
   },
 };
 

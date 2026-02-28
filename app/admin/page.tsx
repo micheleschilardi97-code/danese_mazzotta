@@ -252,7 +252,7 @@ export default function AdminDashboard() {
             </div>
             <div>
               <h1 className={styles.brandTitle}>Dashboard Prenotazioni</h1>
-              <p className={styles.brandSub}>Omnia Dentes — Area Riservata</p>
+              <p className={styles.brandSub}>Danese-Mazzotta — Area Riservata</p>
             </div>
           </div>
 

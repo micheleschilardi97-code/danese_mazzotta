@@ -182,8 +182,8 @@ export const PHONE_FORMAT = {
 
 // SEO & Meta
 export const SEO_CONFIG = {
-  TITLE_TEMPLATE: '%s | Omnia Dentes Studio Dentistico',
-  DEFAULT_TITLE: 'Dentista Monteroni di Lecce | Omnia Dentes',
+  TITLE_TEMPLATE: '%s | Studio Dentistico Danese-Mazzotta',
+  DEFAULT_TITLE: 'Dentista Lecce | Danese-Mazzotta',
   DESCRIPTION_LENGTH: { MIN: 120, MAX: 160 },
   OG_IMAGE_SIZE: { WIDTH: 1200, HEIGHT: 630 },
 } as const;

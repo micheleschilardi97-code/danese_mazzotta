@@ -281,10 +281,10 @@ const nextConfig: NextConfig = {
 // app/sitemap.ts
 export default async function sitemap() {
   // Fetch dynamic content
-  const posts = await fetch('https://studgiugno.it/api/blog').then(r => r.json());
+  const posts = await fetch('https://danesemazzotta.it/api/blog').then(r => r.json());
   
   const blogUrls = posts.map(post => ({
-    url: `https://studgiugno.it/blog/${post.slug}`,
+    url: `https://danesemazzotta.it/blog/${post.slug}`,
     lastModified: post.updatedAt,
     changeFrequency: 'weekly',
     priority: 0.6,
@@ -301,8 +301,8 @@ export default async function sitemap() {
 ```json
 // public/manifest.json
 {
-  "name": "Studio Dentistico Dott. Mario Giugno",
-  "short_name": "Studio Giugno",
+  "name": "Studio Dentistico Danese-Mazzotta",
+  "short_name": "Studio Danese-Mazzotta",
   "description": "Impianti dentali senza dolore a Lecce",
   "start_url": "/",
   "display": "standalone",
@@ -355,8 +355,8 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/images/',
       },
     ],
-    sitemap: 'https://studgiugno.it/sitemap.xml',
-    host: 'https://studgiugno.it',
+    sitemap: 'https://danesemazzotta.it/sitemap.xml',
+    host: 'https://danesemazzotta.it',
   };
 }
 ```
@@ -368,7 +368,7 @@ export default function robots(): MetadataRoute.Robots {
 ### Lighthouse Audit
 ```bash
 npm install -g lighthouse
-lighthouse https://studgiugno.it --view
+lighthouse https://danesemazzotta.it --view
 ```
 
 **Target Scores:**
@@ -378,7 +378,7 @@ lighthouse https://studgiugno.it --view
 - SEO: 100 🎯
 
 ### PageSpeed Insights
-https://pagespeed.web.dev/analysis?url=https://studgiugno.it
+https://pagespeed.web.dev/analysis?url=https://danesemazzotta.it
 
 ### Web Vitals Target
 - **LCP** (Largest Contentful Paint): < 2.5s
@@ -387,19 +387,19 @@ https://pagespeed.web.dev/analysis?url=https://studgiugno.it
 
 ### Mobile Testing
 - Google Mobile-Friendly Test: https://search.google.com/test/mobile-friendly
-- Responsinator: https://www.responsinator.com/?url=studgiugno.it
+- Responsinator: https://www.responsinator.com/?url=danesemazzotta.it
 
 ### SEO Validation
 ```bash
 # Controlla struttura URL
-curl -I https://studgiugno.it
-curl -I https://studgiugno.it/servizi
+curl -I https://danesemazzotta.it
+curl -I https://danesemazzotta.it/servizi
 
 # Controlla sitemap
-curl https://studgiugno.it/sitemap.xml
+curl https://danesemazzotta.it/sitemap.xml
 
 # Controlla robots.txt
-curl https://studgiugno.it/robots.txt
+curl https://danesemazzotta.it/robots.txt
 ```
 
 ### Schema.org Validation
@@ -448,9 +448,9 @@ npx serve@latest out -l 3000
 
 ### Setup Google Search Console
 1. Vai su https://search.google.com/search-console
-2. Aggiungi proprietà: https://studgiugno.it
+2. Aggiungi proprietà: https://danesemazzotta.it
 3. Verifica con tag HTML o DNS
-4. Submit sitemap: https://studgiugno.it/sitemap.xml
+4. Submit sitemap: https://danesemazzotta.it/sitemap.xml
 
 ### Setup Vercel Analytics
 ```bash

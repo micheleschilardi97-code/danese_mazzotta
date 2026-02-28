@@ -10,7 +10,7 @@ Questa guida spiega come deployare lo stesso codebase per clienti diversi con co
 config/
   ├── index.ts                    # Config manager principale
   └── clients/
-      ├── mario-giugno.ts         # Config cliente 1
+      ├── danese-mazzotta.ts        # Config cliente 1
       └── nuzzoli-zacchino.ts     # Config cliente 2
 ```
 
@@ -32,7 +32,7 @@ Ogni file cliente contiene:
 Duplica un file esistente in `config/clients/`:
 
 ```bash
-cp config/clients/mario-giugno.ts config/clients/nuovo-cliente.ts
+cp config/clients/danese-mazzotta.ts config/clients/nuovo-cliente.ts
 ```
 
 ### 2. Modifica i dati
@@ -47,7 +47,7 @@ In `config/index.ts`, aggiungi:
 import { clientConfig as nuovoClienteConfig } from './clients/nuovo-cliente';
 
 const clients = {
-  'mario-giugno': marioGiugnoConfig,
+  'danese-mazzotta': daneseMazzottaConfig,
   'nuzzoli-zacchino': nuzzoliZacchinoConfig,
   'nuovo-cliente': nuovoClienteConfig,  // ← Aggiungi qui
 } as const;
@@ -69,16 +69,16 @@ git commit -m "Add multi-client support"
 git push origin main
 ```
 
-#### 2. Primo Deploy (Mario Giugno)
+#### 2. Primo Deploy (Danese-Mazzotta)
 
 1. Vai su [vercel.com](https://vercel.com)
 2. Clicca "Add New Project"
 3. Importa il repository GitHub
 4. **Environment Variables**:
    - Key: `NEXT_PUBLIC_CLIENT_ID`
-   - Value: `mario-giugno`
+   - Value: `danese-mazzotta`
 5. Deploy
-6. Aggiungi dominio custom: `studiomariogiugno.it`
+6. Aggiungi dominio custom: `danesemazzotta.it`
 
 #### 3. Secondo Deploy (Nuzzoli Zacchino)
 
@@ -113,7 +113,7 @@ export function middleware(request: NextRequest) {
   if (hostname.includes('nuzzolizacchino')) {
     process.env.NEXT_PUBLIC_CLIENT_ID = 'nuzzoli-zacchino';
   } else {
-    process.env.NEXT_PUBLIC_CLIENT_ID = 'mario-giugno';
+    process.env.NEXT_PUBLIC_CLIENT_ID = 'danese-mazzotta';
   }
 }
 ```
@@ -122,9 +122,9 @@ export function middleware(request: NextRequest) {
 
 ## 🔧 Test in Locale
 
-### Cliente 1 (Mario Giugno)
+### Cliente 1 (Danese-Mazzotta)
 ```bash
-echo "NEXT_PUBLIC_CLIENT_ID=mario-giugno" > .env.local
+echo "NEXT_PUBLIC_CLIENT_ID=danese-mazzotta" > .env.local
 npm run dev
 ```
 
@@ -140,8 +140,8 @@ npm run dev
 
 ### Prima (Hard-coded):
 ```typescript
-<h1>Studio Dr. Mario Giugno</h1>
-<a href="tel:+390832199315">0832 199 315</a>
+<h1>Studio Danese-Mazzotta</h1>
+<a href="tel:+393715855834">371 585 5834</a>
 ```
 
 ### Dopo (Dynamic):
@@ -171,7 +171,7 @@ const hero = getHeroData();
 ```
 public/
   └── images/
-      ├── mario-giugno/
+      ├── danese-mazzotta/
       │   ├── logo.png
       │   ├── hero-bg.jpg
       │   └── doctor.jpg
@@ -184,9 +184,9 @@ public/
 ### Nel config:
 ```typescript
 images: {
-  logo: "/images/mario-giugno/logo.png",
-  heroBg: "/images/mario-giugno/hero-bg.jpg",
-  doctor: "/images/mario-giugno/doctor.jpg"
+  logo: "/images/danese-mazzotta/logo.png",
+  heroBg: "/images/danese-mazzotta/hero-bg.jpg",
+  doctor: "/images/danese-mazzotta/doctor.jpg"
 }
 ```
 

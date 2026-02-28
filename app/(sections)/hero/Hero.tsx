@@ -146,7 +146,7 @@ export default function Hero() {
           {isMobile ? (
             <Image
               src="/images/studio_2.png"
-              alt="Omnia Dentes Studio Dentistico - Monteroni di Lecce"
+              alt="Studio Dentistico Danese-Mazzotta - Lecce"
               fill
               priority
               quality={85}
@@ -158,7 +158,7 @@ export default function Hero() {
           ) : (
             <Image
               src="/images/studio_2.png"
-              alt="Omnia Dentes Studio Dentistico - Monteroni di Lecce"
+              alt="Studio Dentistico Danese-Mazzotta - Lecce"
               fill
               priority
               quality={90}

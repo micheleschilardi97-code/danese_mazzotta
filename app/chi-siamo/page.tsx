@@ -5,14 +5,14 @@ import About from '../(sections)/about/About';
 
 export const metadata: Metadata = {
   title: 'Chi Siamo',
-  description: `Scopri ${config.studio.dottore} e il nostro studio dentistico a Monteroni di Lecce. Oltre ${config.stats.anniEsperienza} anni di esperienza in implantologia e chirurgia orale con tecnologie all'avanguardia.`,
+  description: `Scopri ${config.studio.dottore} e il nostro studio dentistico a Lecce. Oltre ${config.stats.anniEsperienza} anni di esperienza in implantologia e chirurgia orale con tecnologie all'avanguardia.`,
   keywords: [
-    'dentista monteroni di lecce chi siamo',
-    'omnia dentes studio dentistico',
-    'studio dentistico monteroni lecce',
+    'dentista lecce chi siamo',
+    'studio dentistico danese mazzotta',
+    'studio dentistico lecce',
     'parodontologia lecce',
     'ortodonzia invisibile lecce',
-    'odontoiatra monteroni di lecce',
+    'odontoiatra lecce',
   ],
   alternates: {
     canonical: `${config.seo.siteUrl}/chi-siamo`,
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: config.seo.siteName,
     url: `${config.seo.siteUrl}/chi-siamo`,
     title: `Chi Siamo | ${config.studio.nomeBreve}`,
-    description: `${config.studio.dottore} — ${config.stats.anniEsperienza}+ anni di esperienza in ${config.studio.specializzazione} a Monteroni di Lecce.`,
+    description: `${config.studio.dottore} — ${config.stats.anniEsperienza}+ anni di esperienza in ${config.studio.specializzazione} a Lecce.`,
     images: [{ url: `${config.seo.siteUrl}${config.seo.ogImage}`, width: 1200, height: 630 }],
   },
 };

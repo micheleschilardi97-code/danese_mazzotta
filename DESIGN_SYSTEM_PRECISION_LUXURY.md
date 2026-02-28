@@ -377,7 +377,7 @@ const observer = new IntersectionObserver((entries) => {
 **Un sito che:**
 - Sembra progettato da uno studio di design boutique
 - NON sembra un template
-- Il Dr. Mario Giugno è orgoglioso di mostrare
+- Il team Danese-Mazzotta è orgoglioso di mostrare
 - I pazienti RICORDANO
 
 **Risultato atteso:**
@@ -397,4 +397,4 @@ const observer = new IntersectionObserver((entries) => {
 
 **Creato**: Febbraio 2026  
 **Status**: IN IMPLEMENTAZIONE  
-**Designer**: AI + Vision Dr. Mario Giugno
+**Designer**: AI + Vision Danese-Mazzotta

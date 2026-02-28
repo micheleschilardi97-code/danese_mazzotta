@@ -129,7 +129,7 @@ export const prefersReducedMotion = (): boolean => {
  * Format phone number for display
  */
 export const formatPhoneNumber = (phone: string): string => {
-  // Format: 320 153 9990
+  // Format: 371 585 5834
   const cleaned = phone.replace(/\D/g, '');
   const match = cleaned.match(/^(\d{4})(\d{3})(\d{4})$/);
   
@@ -184,7 +184,7 @@ export const generateHeroStructuredData = (data: any) => {
   return {
     '@context': 'https://schema.org',
     '@type': 'MedicalBusiness',
-    'name': 'Omnia Dentes Studio Dentistico',
+    'name': 'Studio Dentistico Danese-Mazzotta',
     'description': data.subtitle,
     'telephone': data.phoneNumber,
     'priceRange': '$$',

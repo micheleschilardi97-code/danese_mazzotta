@@ -299,4 +299,4 @@ Componenti creati per uso commerciale. Personalizza liberamente.
 
 ---
 
-**Creato con ❤️ per Studio Dentistico Dr. Mario Giugno**
+**Creato con ❤️ per Studio Dentistico Danese-Mazzotta**

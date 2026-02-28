@@ -1,4 +1,4 @@
-# Studio Dentistico Dott. Mario Giugno - Lecce
+# Studio Dentistico Danese-Mazzotta - Lecce
 
 Questo sito è stato creato con **Next.js 14** utilizzando l'**App Router** e segue un'architettura modulare basata su feature.
 
@@ -66,7 +66,7 @@ Il sito utilizza CSS Custom Properties per un design system coerente:
 ## 📝 Contenuti da Aggiornare
 
 1. **Immagini**: Sostituire i placeholder in `/public/images/`
-   - `doctor.jpg` - Foto del Dott. Giugno
+   - `doctor.jpg` - Foto Danese-Mazzotta
    - `og-image.jpg` - Immagine per social media (1200x630px)
    - `studio.jpg` - Foto dello studio
    - Avatar testimonianze: `avatar-1.jpg` to `avatar-5.jpg`
@@ -77,7 +77,7 @@ Il sito utilizza CSS Custom Properties per un design system coerente:
 
 4. **Social Media**: Aggiornare link in `components/Footer/footer.data.ts`
 
-5. **Domain**: Cambiare `studgiugno.it` con il dominio reale
+5. **Domain**: Cambiare `danesemazzotta.it` con il dominio reale
 
 ## 🔧 Configurazione
 
@@ -95,4 +95,4 @@ Il sito utilizza CSS Custom Properties per un design system coerente:
 
 ## 📄 License
 
-© 2026 Studio Dentistico Dott. Mario Giugno. Tutti i diritti riservati.
+© 2026 Studio Dentistico Danese-Mazzotta. Tutti i diritti riservati.

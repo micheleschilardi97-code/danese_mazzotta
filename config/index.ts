@@ -20,7 +20,7 @@ export function getClientConfig(): ClientConfig {
   const clientId = (process.env.NEXT_PUBLIC_CLIENT_ID || 'ditanna-cairo') as ClientId;
   
   if (!clients[clientId]) {
-    console.warn(`Client "${clientId}" not found, falling back to ditanna-cairo`);
+    console.warn(`Client "${clientId}" not found, falling back to danese-mazzotta`);
     return clients['ditanna-cairo'];
   }
   

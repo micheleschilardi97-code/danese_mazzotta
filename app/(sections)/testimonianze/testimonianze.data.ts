@@ -15,7 +15,7 @@ export const testimonianzeData: Testimonianza[] = [
     role: 'Paziente dal 2020',
     avatar: '',
     rating: 5,
-    text: 'Esperienza eccellente! Lo staff di Omnia Dentes è molto professionale e attento. Il trattamento è stato un successo completo e ora posso sorridere con fiducia.',
+    text: 'Esperienza eccellente! Lo staff di Danese-Mazzotta è molto professionale e attento. Il trattamento è stato un successo completo e ora posso sorridere con fiducia.',
     date: '2024-01-15'
   },
   {
@@ -33,7 +33,7 @@ export const testimonianzeData: Testimonianza[] = [
     role: 'Paziente dal 2021',
     avatar: '',
     rating: 5,
-    text: 'Avevo paura del dentista, ma lo staff di Omnia Dentes mi ha messo subito a mio agio. Il trattamento è stato praticamente indolore e il risultato è fantastico.',
+    text: 'Avevo paura del dentista, ma lo staff di Danese-Mazzotta mi ha messo subito a mio agio. Il trattamento è stato praticamente indolore e il risultato è fantastico.',
     date: '2024-01-05'
   },
   {

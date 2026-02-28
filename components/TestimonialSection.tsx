@@ -25,7 +25,7 @@ const testimonials: Testimonial[] = [
     city: 'Lecce',
     service: 'Impianto Dentale Completo',
     rating: 5,
-    text: 'Dopo anni di insicurezza, finalmente posso sorridere senza vergogna. Lo staff di Omnia Dentes è stato professionale e delicato, non ho sentito alcun dolore.',
+    text: 'Dopo anni di insicurezza, finalmente posso sorridere senza vergogna. Lo staff di Danese-Mazzotta è stato professionale e delicato, non ho sentito alcun dolore.',
     image: '/images/testimonials/maria-r.jpg',
     date: 'Gennaio 2026'
   },
